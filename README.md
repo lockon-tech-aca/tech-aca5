@@ -8,7 +8,7 @@ This is a repository of tech-aca 5th term.
 ## 1. 環境構築 Hello World
 
 ### ディレクトリ名
-* helloworld
+* hello_world
 
 ### 基本要件
 
@@ -153,8 +153,7 @@ This is a repository of tech-aca 5th term.
 * 掲示板2をVagrant（VirtualBox）に移行する
 
 ### 手順
-1. VirtualBox と Vagrant を利用して個人のPC上に Linux のサーバを立てる
-　　https://github.com/arisgi/eccube_techaca
+1. VirtualBox と Vagrant を利用して個人のPC上に Linux のサーバを立てる(ec-cube/README.mdを参照)
 2. 掲示板2で作成したソースコードを 1. で立てたサーバにアップロードし、
 　しかるべき場所に設置する
 3. ブラウザから 2. で設置したアプリケーションを使えるか確認する
@@ -168,7 +167,7 @@ This is a repository of tech-aca 5th term.
 
 ### 基本要件
 * EC-CUBEとは何かを知る
-* オープンソースとは何かを知る"
+* オープンソースとは何かを知る
 
 ### 応用要件
 * EC-CUBE2.13.5をインストール
@@ -177,17 +176,20 @@ This is a repository of tech-aca 5th term.
 
 ### 手順
 1. EC-CUBEをインストールする
-　　https://github.com/arisgi/eccube_techaca
-　　※２回目以降のVagrant起動時にエラーが出るので下のF23セルのコマンドを実行する
+  - (ec-cube/README.mdを参照)
+  - ２回目以降のVagrant起動時にエラーが出る場合は下の解除方法を参考にする
 2. フロント画面・管理画面を触ってみる
 3. ソースコードを読みつつ、EC-CUBEをカスタマイズしてみる
-　 ソースコードの読み方：
-　 　https://ecnomikata.com/column/8635/
-　 カスタマイズ例：
-　　 http://blog.livedoor.jp/chibicoo/archives/50208181.html"
+
 
 
 ### 参考
+
+#### ソースコードの読み方
+* https://ecnomikata.com/column/8635/
+
+#### カスタマイズ例：
+* http://blog.livedoor.jp/chibicoo/archives/50208181.html
 
 #### Vagrantでの２回目以降の起動時に出るエラーの解除方法
 
