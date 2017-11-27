@@ -16,6 +16,9 @@ This is a repository of tech-aca 5th term.
 
 ## レビューの流れ
 
+* `lockon-tech-aca/tech-aca5` （このリポジトリ）からForkを行う
+* フォークしてきたリポジトリをcloneする
+  - `git clone git@github.com:my_user_name/tech-aca5.git`
 * フォークしてきた自分のリポジトリに作業ブランチA（名前はなんでも良い）をつくる
   - `git branch -b my_branch`
 * 課題のプログラミングを終えたらpushする
