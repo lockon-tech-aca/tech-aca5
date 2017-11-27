@@ -1,3 +1,38 @@
+# テーマ6 : EC-CUBE理解
+
+## ディレクトリ名
+
+* ec-cube
+
+
+## 基本要件
+
+* EC-CUBEとは何かを知る
+* オープンソースとは何かを知る
+
+
+## 応用要件
+
+* EC-CUBE2.13.5をインストール
+* 商品登録、会員登録、受注、その他を使ってみる
+* その仕組み（ソースコード）を読み解く
+
+
+## 手順
+
+1. EC-CUBEをインストールする
+  - (ec-cube/README.mdを参照)
+  - ２回目以降のVagrant起動時にエラーが出る場合は下の解除方法を参考にする
+2. フロント画面・管理画面を触ってみる
+3. ソースコードを読みつつ、EC-CUBEをカスタマイズしてみる
+
+
+
+-------
+
+
+
+
 # EC-CUBE2.13.5の環境構築手順
 
 ## 以下の環境を想定
@@ -26,7 +61,7 @@ Git for Windows : https://git-for-windows.github.io/
 
 ### 仮想マシンを起動
 GitHubで [arisugi/eccube_techaca](https://github.com/arisugi/eccube_techaca) をfork  
-  
+
 Git Bashを開き、~/Documents 以下に eccube_techaca をclone  
 eccube_techaca で仮想マシンを起動  
 ```
@@ -90,5 +125,31 @@ DBパスワード : password
 
 
 ## 参考
+
+### ソースコードの読み方
+* https://ecnomikata.com/column/8635/
+
+### カスタマイズ例：
+* http://blog.livedoor.jp/chibicoo/archives/50208181.html
+
+### Vagrantでの２回目以降の起動時に出るエラーの解除方法
+
+* Vagrant：1.9.1
+* VirtualBox：5.1.14
+
+#### Vagrant内
+
+```bash
+$ sudo yum -y update kernel
+$ sudo yum -y install kernel-devel kernel-headers dkms gcc gcc-c++
+$ sudo /etc/init.d/vboxadd setup
+```
+
+#### Vagrant外
+
+```bash
+vagrant reload
+```
+
 [VirtualBoxで64bit版OSを使うためにIntel VTを有効化する](http://d.hatena.ne.jp/torazuka/20100620/p1)  
 [Vagrantのmountエラーを解決しようとしたらvboxのリビルドがこける](http://qiita.com/wakaba260/items/b5c87b7815b710f303a0)
