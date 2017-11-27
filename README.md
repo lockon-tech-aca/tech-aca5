@@ -40,7 +40,9 @@ This is a repository of tech-aca 5th term.
 * Fork先のマスターから作業ブランチへマージ
 
 
-* 参考URL（一連のプルリクの流れを解説）
+### 参考URL（一連のプルリクの流れを解説）
+
+* GitHub】Pull Requestの手順
   - https://qiita.com/Commander-Aipa/items/d61d21988a36a4d0e58b
 
 
