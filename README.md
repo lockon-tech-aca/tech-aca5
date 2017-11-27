@@ -14,14 +14,15 @@ This is a repository of tech-aca 5th term.
 4. コードレビューをする時は、 `pull request` を行ってください。Github上でメンターがコメントを追記してレビューを行ないます。
 
 
-## レビューの流れ
+## 課題〜レビューの流れ
 
 * `lockon-tech-aca/tech-aca5` （このリポジトリ）からForkを行う
 * フォークしてきたリポジトリをcloneする
   - `git clone git@github.com:my_user_name/tech-aca5.git`
 * フォークしてきた自分のリポジトリに作業ブランチA（名前はなんでも良い）をつくる
   - `git branch -b my_branch`
-* 課題のプログラミングを終えたらpushする
+* 課題に取り組む
+* 課題を終えたらpushする
   - `git commit -m 'commit message'`
   - `git push origin my_branch`
 * 課題提出時は作業ブランチからフォーク元のマスターに `pull request` （プルリク）する
