@@ -1,0 +1,11 @@
+MariaDB [board2_db]> SELECT post_table.id,contents,user_id,name,password
+    ->  FROM post_table,member_table
+    -> WHERE user_id=member_table.id;
++----+----------------------+---------+------+----------+
+| id | contents             | user_id | name | password |
++----+----------------------+---------+------+----------+
+|  3 | おはようございます！ |       1 | 梅田 | 123      |
+|  4 | こんにちは！         |       2 | 福島 | 456      |
+|  5 | こんばんは！         |       3 | 奈良 | 789      |
++----+----------------------+---------+------+----------+
+3 rows in set (0.00 sec)
