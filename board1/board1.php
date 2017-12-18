@@ -33,12 +33,7 @@ require_once 'Encode.php';
         die("エラーメッセージ : {$e->getMessege()}");
     }
     ?>
-</table>
-</body>
-</html>
-
-<html>
-<body>
+</table><br>
 <form method="POST" action="insert_process.php">
     <p>
         投稿者名:<br />
