@@ -10,7 +10,7 @@ function dbConnection($db_name){
     
     $db_user = "root";  
     $db_pass = "tsubaki0805";   
-    $db_host = "127.0.0.1";   
+    $db_host = "localhost";   
     $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8";
     
     /* データベース接続 */
