@@ -8,8 +8,8 @@
 */
 function dbConnection($db_name){
     
-    $db_user = "ODBC";  
-    $db_pass = "password";   
+    $db_user = "root";  
+    $db_pass = "";   
     $db_host = "127.0.0.1";   
     $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8";
     
