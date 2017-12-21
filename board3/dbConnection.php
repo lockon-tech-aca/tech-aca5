@@ -1,5 +1,6 @@
 <?php
-
+ini_set("display_errors", On);
+error_reporting(E_ALL);
 /*
 **
 **データベースに接続する関数
@@ -10,7 +11,7 @@ function dbConnection($db_name){
     
     $db_user = "root";  
     $db_pass = "tsubaki0805";   
-    $db_host = "localhost:2222";   
+    $db_host = "127.0.0.1";   
     $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8";
     
     /* データベース接続 */
