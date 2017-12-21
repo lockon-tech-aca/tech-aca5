@@ -2,6 +2,8 @@
 require_once('common.php');
 require_once('dbConnection.php');
 
+require '/password_compact/lib/password.php';
+
 session_start();
 
 /*エラーメッセージの初期化*/
