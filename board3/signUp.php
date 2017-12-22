@@ -2,7 +2,6 @@
 require_once('common.php');
 require_once('dbConnection.php');
 
-require 'password.php';
 
 session_start();
 
