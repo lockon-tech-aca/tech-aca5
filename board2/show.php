@@ -2,25 +2,39 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>ESS1</title>
+        <title>ESS2</title>
     </head>
 
     <body>
-    <h2>掲示板１</h2><br>
+    <h2>掲示板2</h2><br>
+
     <?php
     session_start();
-    //var_dump($_SESSION['error']);
-    if (isset($_SESSION['error'])){
-        print $_SESSION['error'];
-    }
+    //var_dump($_SESSION['username']);
+    if(isset($_SESSION['username'])){
+        $name=$_SESSION['username'];
+
+        //var_dump($_SESSION['error']);
+        if (isset($_SESSION['error'])){
+            print $_SESSION['error'];
+        }
     ?>
-    <form method="post" action="insert.php">
-        名前：<input type="text" name="name"><br>
+        <p>ようこそ<?php print $name; ?>さん</p>
+        <input type="button" onclick="location.href='http://localhost/tech-aca5/board2/logout.php'"value="ログアウト"><br>
+        <form method="post" action="insert.php">
         投稿：<br>
         <textarea name="contents" row="8" cols="40"></textarea><br>
         <input type="submit">
-    </form>
+        </form>
 
+    <?php
+    }else{
+    ?>
+        <input type="button" onclick="location.href='http://localhost/tech-aca5/board2/user_create.php'"value="新規登録">
+        <input type="button" onclick="location.href='http://localhost/tech-aca5/board2/login.php'"value="ログイン">
+    <?php
+    }
+    ?>
     </body>
 </html>
 
@@ -31,9 +45,9 @@ require('db_connection.php');
 
 try {
     $statement = $pdo->query("select * from post_table");
-    //var_dump($stt);
+    //var_dump();
     foreach ($statement as $row) {
-        echo $row['id'].':'.$row['name'].'<br>';
+        echo $row['id'].':'.$row['user_id'].'<br>';
         echo $row['contents'];
         echo '<br>';
         //var_dump($row);

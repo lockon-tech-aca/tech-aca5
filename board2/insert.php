@@ -1,25 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kyoko
- * Date: 2017/12/05
- * Time: 18:05
- */
-$name=$_POST['name'];
+
+$id=$_SESSION['id'];
 $contents=$_POST['contents'];
 
-if($name==''){
+session_start();
 
-    session_start();
-    $_SESSION['error']='名前を入れてください';
-    header('Location: http://localhost/tech-aca5_kyoko_hirai/board2/show.php');
-    exit;
+if($contents==''){
 
-}elseif($contents==''){
-
-    session_start();
     $_SESSION['error']='投稿を入力してください';
-    header('Location: http://localhost/tech-aca5_kyoko_hirai/board2/show.php');
+    header('Location: http://localhost/tech-aca5/board2/show.php');
     exit;
 
 }else{
@@ -29,8 +18,8 @@ if($name==''){
 
     try {
         //insert
-        $stt = $pdo->prepare("insert into post_table(name, contents) values(:name, :contents)");
-        $stt->bindValue(':name', $name);
+        $stt = $pdo->prepare("insert into post_table(user_id, contents) values(:user_id, :contents)");
+        $stt->bindValue(':user_id', $id);
         $stt->bindValue(':contents', $contents);
         $stt->execute();
     } catch (PDOException $e) {
@@ -40,6 +29,6 @@ if($name==''){
     //接続を切る
     $pdo = null;
 
-    header('Location: http://localhost/tech-aca5_kyoko_hirai/board2/show.php');
+    header('Location: http://localhost/tech-aca5/board2/show.php');
     exit;
 }
