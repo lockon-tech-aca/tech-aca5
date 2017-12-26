@@ -5,11 +5,18 @@
     <title>login</title>
 </head>
 <body>
-login form
-<form action="session1.php" method="post"><br />
-    username:<input type="text" name="name"><br />
-    password:<input type="text" name="password"><br />
-    <input type="submit" name="login" value="login">
+新規登録
+<form action="insert_process.php" method="post">
+    username:<input type="text" name="name_r"><br />
+    password:<input type="text" name="password_r"><br />
+    <input type="submit" name="register" value="登録">
+</form><br />
+
+ログイン
+<form action="session1.php" method="post">
+    username:<input type="text" name="name_l"><br />
+    password:<input type="text" name="password_l"><br />
+    <input type="submit" name="login" value="ログイン">
 </form>
 </body>
 </html>
