@@ -16,5 +16,5 @@ try {
     die("エラーメッセージ:{$e->getMessege()}");
 }
     //処理後は入力フォームにリダイレクト
-header('Location: http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/board.php');
+header('Location: http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/board1.php');
 ?>

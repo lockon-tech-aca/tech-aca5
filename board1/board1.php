@@ -16,7 +16,7 @@ require_once 'Encode.php';
         //データベースへの接続を確立
         $db = getDb();
         //SELECT命令の実行
-        $stt = $db->prepare('SELECT * FROM post_table ORDER BY contents DESC');
+        $stt = $db->prepare('SELECT * FROM post_table ORDER BY id ASC');
         $stt->execute();
         //結果セットの内容を順に出力
         while($row = $stt->fetch(PDO::FETCH_ASSOC)){
