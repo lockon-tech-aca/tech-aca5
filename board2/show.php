@@ -1,57 +1,83 @@
-<!doctype html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>ESS2</title>
-    </head>
-
-    <body>
-    <h2>掲示板2</h2><br>
-
-    <?php
-    session_start();
-    //var_dump($_SESSION['username']);
-    if(isset($_SESSION['username'])){
-        $name=$_SESSION['username'];
-
-        //var_dump($_SESSION['error']);
-        if (isset($_SESSION['error'])){
-            print $_SESSION['error'];
-        }
-    ?>
-        <p>ようこそ<?php print $name; ?>さん</p>
-        <input type="button" onclick="location.href='http://localhost/tech-aca5/board2/logout.php'"value="ログアウト"><br>
-        <form method="post" action="insert.php">
-        投稿：<br>
-        <textarea name="contents" row="8" cols="40"></textarea><br>
-        <input type="submit">
-        </form>
-
-    <?php
-    }else{
-    ?>
-        <input type="button" onclick="location.href='http://localhost/tech-aca5/board2/user_create.php'"value="新規登録">
-        <input type="button" onclick="location.href='http://localhost/tech-aca5/board2/login.php'"value="ログイン">
-    <?php
-    }
-    ?>
-    </body>
-</html>
-
 <?php
 
-//接続
+require_once 'Smarty.class.php';
+
+$smarty = new Smarty();
+$smarty -> template_dir = 'templates/';
+$smarty -> compile_dir = 'templates_c/';
+
+session_start();
+
+if(isset($_POST['insert'])) {
+
+    $id = $_SESSION['id'];
+    $contents = $_POST['contents'];
+
+
+    if ($contents == '') {
+
+        $smarty->assign('error', '投稿を入力してください');
+
+    } else {
+
+        require('db_connection.php');
+
+        try {
+
+            //insert
+            $post = $pdo->prepare("insert into post_table(user_id, contents) values(:user_id, :contents)");
+            $post->bindValue(':user_id', $id);
+            $post->bindValue(':contents', $contents);
+            $post->execute();
+
+        } catch (PDOException $e) {
+            print "エラー:{$e->getMessage()}";
+        }
+
+        //接続を切る
+        $pdo = null;
+
+    }
+}
+
+
+if(isset($_SESSION['username'])) {
+    $smarty -> assign('name',$_SESSION['username']);
+}
+
 require('db_connection.php');
 
 try {
-    $statement = $pdo->query("select * from post_table");
-    //var_dump();
-    foreach ($statement as $row) {
-        echo $row['id'].':'.$row['user_id'].'<br>';
-        echo $row['contents'];
-        echo '<br>';
-        //var_dump($row);
+
+    $posts = $pdo->query("select * from post_table");
+    $posts = $posts ->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($posts as $post) {
+
+        //post_tableのuser_idからmember_tableのnameを引き出す
+        $sql = 'SELECT name FROM member_table where id = :user_id';
+        $name = $pdo->prepare($sql);
+        $name -> bindValue(':user_id' ,(int) $post['user_id'], PDO::PARAM_INT);
+        $name -> execute();
+        $username = $name -> fetch(PDO::FETCH_ASSOC);
+        //var_dump($username);
+
+        $post['name'] = $username['name'];
+
+        $allposts[] = array($post);
     }
+
+    //var_dump($allposts);
+    $smarty -> assign('posts',$allposts);
+
+
+    if(isset($_SESSION['id'])) {
+        $smarty->assign('user_id', $_SESSION['id']);
+    }
+
 } catch ( PDOException $e ) {
     print "エラー:{$e->getMessage()}";
 }
+
+
+$smarty->display('show.html');

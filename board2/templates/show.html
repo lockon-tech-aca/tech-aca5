@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ESS2</title>
+    </head>
+
+    <body>
+        <h2>掲示板2</h2><br>
+
+        {if isset($name)}
+
+            {if isset($error)} <p>{$error}</p>
+            {/if}
+
+            ようこそ {$name} さん <input type="button" onclick="location.href='http://localhost/tech-aca5/board2/logout.php'"value="ログアウト"><br>
+            <form method="post" action="show.php">
+                投稿：<br>
+                <textarea name="contents" row="8" cols="40"></textarea><br>
+                <input type="submit" name="insert">
+            </form>
+
+
+        {else}
+
+            <input type="button" onclick="location.href='http://localhost/tech-aca5/board2/user_create.php'"value="新規登録">
+            <input type="button" onclick="location.href='http://localhost/tech-aca5/board2/login.php'"value="ログイン"><br>
+
+        {/if}
+
+        {foreach $posts as $post}
+            {$post[0]['id']} : {$post[0]['name']} <br>
+            {$post[0]['contents']}
+
+            {if isset($user_id)}
+
+                {if $post[0]['user_id'] === $user_id}
+
+                    <form action="post_update.php" method="post">
+                        <input type="hidden" name="id" value="{$post[0]['id']}">
+                        <input type="submit" value="編集">
+                    </form>
+
+                {/if}
+
+            {/if}
+            <br>
+        {/foreach}
+
+    </body>
+</html>
