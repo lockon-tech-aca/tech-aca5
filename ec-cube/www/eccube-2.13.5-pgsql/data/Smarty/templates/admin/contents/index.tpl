@@ -27,10 +27,11 @@
         <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
         <input type="hidden" name="mode" value="" />
         <input type="hidden" name="news_id" value="<!--{$arrForm.news_id.value|default:$tpl_news_id|h}-->" />
+	<!--{$test|@var_dump}-->
         <!--{* ▼登録テーブルここから *}-->
         <table>
             <tr>
-                <th>投稿日付<span class="attention"> *</span></th>
+                <th>表示開始期限<span class="attention"> *</span></th>
                 <td>
                     <!--{if $arrErr.year || $arrErr.month || $arrErr.day}--><span class="attention"><!--{$arrErr.year}--><!--{$arrErr.month}--><!--{$arrErr.day}--></span><!--{/if}-->
                     <select name="year" <!--{if $arrErr.year || $arrErr.month || $arrErr.day }-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
@@ -48,20 +49,20 @@
                 </td>
             </tr>
 	    <tr>
-                <th>削除日付<span class="attention"> *</span></th>
+                <th>表示終了期限<span class="attention"> *</span></th>
                 <td>
-                    <!--{if $arrErr.year || $arrErr.month || $arrErr.day}--><span class="attention"><!--{$arrErr.year}--><!--{$arrErr.month}--><!--{$arrErr.day}--></span><!--{/if}-->
-                    <select name="year" <!--{if $arrErr.year || $arrErr.month || $arrErr.day }-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <!--{if $arrErr.end_year || $arrErr.end_month || $arrErr.end_day}--><span class="attention"><!--{$arrErr.end_year}--><!--{$arrErr.end_month}--><!--{$arrErr.end_day}--></span><!--{/if}-->
+                    <select name="end_year" <!--{if $arrErr.end_year || $arrErr.end_month || $arrErr.end_day }-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
                         <option value="" selected="selected">----</option>
-                        <!--{html_options options=$arrYear selected=$arrForm.year.value}-->
+                        <!--{html_options options=$arrYear selected=$arrForm.end_year.value}-->
                     </select>年
-                    <select name="month" <!--{if $arrErr.year || $arrErr.month || $arrErr.day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <select name="end_month" <!--{if $arrErr.end_year || $arrErr.end_month || $arrErr.end_day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
                         <option value="" selected="selected">--</option>
-                        <!--{html_options options=$arrMonth selected=$arrForm.month.value}-->
+                        <!--{html_options options=$arrMonth selected=$arrForm.end_month.value}-->
                     </select>月
-                    <select name="day" <!--{if $arrErr.year || $arrErr.month || $arrErr.day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <select name="end_day" <!--{if $arrErr.end_year || $arrErr.end_month || $arrErr.end_day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
                         <option value="" selected="selected">--</option>
-                        <!--{html_options options=$arrDay selected=$arrForm.day.value}-->
+                        <!--{html_options options=$arrDay selected=$arrForm.end_day.value}-->
                     </select>日
                 </td>
             </tr>
@@ -119,6 +120,7 @@
         <input type="hidden" name="rank" value="" />
         <table class="list">
             <col width="5%" />
+	    <col width="5%" />
             <col width="15%" />
             <col width="45%" />
             <col width="5%" />
@@ -127,6 +129,7 @@
             <tr>
                 <th>順位</th>
                 <th>日付</th>
+		<th>表示終了期限</th>
                 <th>タイトル</th>
                 <th class="edit">編集</th>
                 <th class="delete">削除</th>
@@ -137,6 +140,8 @@
                 <!--{assign var=db_rank value="`$arrNews[data].rank`"}-->
                 <td><!--{math equation="$line_max - $db_rank + 1"}--></td>
                 <td><!--{$arrNews[data].cast_news_date|date_format:"%Y/%m/%d"}--></td>
+		<td><!--{$arrNews[data].cast_end_news_date|date_format:"%Y/%m/%d"}--></td>
+		
                 <td class="left">
                     <!--{if $arrNews[data].link_method eq 1 && $arrNews[data].news_url != ""}--><a href="<!--{$arrNews[data].news_url|h}-->" ><!--{$arrNews[data].news_title|h|nl2br}--></a>
                     <!--{elseif $arrNews[data].link_method eq 1 && $arrNews[data].news_url == ""}--><!--{$arrNews[data].news_title|h|nl2br}-->
