@@ -111,10 +111,8 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
 
             case 'pre_edit':
                 $news = $objNews->getNews($news_id);
-                $this->test = $news['cast_news_date'];
                 list($news['year'],$news['month'],$news['day']) = $this->splitNewsDate($news['cast_news_date']);
-                list($news['end_year'],$news['end_month'],$news['end_day']) = $this->splitNewsDate($news['cast_end_news_date']);
-                
+   
                 $objFormParam->setParam($news);
 
                 // POSTデータを引き継ぐ
@@ -172,7 +170,6 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $objErr = new SC_CheckError_Ex($objFormParam->getHashArray());
         $objErr->arrErr = $objFormParam->checkError();
         $objErr->doFunc(array('日付', 'year', 'month', 'day'), array('CHECK_DATE'));
-        $objErr->doFunc(array('表示終了期限', 'end_year', 'end_month', 'end_day'), array('CHECK_DATE'));
 
         return $objErr->arrErr;
     }
@@ -187,11 +184,6 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $objFormParam->addParam('日付(年)', 'year', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('日付(月)', 'month', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('日付(日)', 'day', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        /*追加箇所*/
-        $objFormParam->addParam('表示終了日付(年)', 'end_year', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        $objFormParam->addParam('表示終了日付(月)', 'end_month', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        $objFormParam->addParam('表示終了日付(日)', 'end_day', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        /*終わり*/
         $objFormParam->addParam('タイトル', 'news_title', MTEXT_LEN, 'KVa', array('EXIST_CHECK','MAX_LENGTH_CHECK','SPTAB_CHECK'));
         $objFormParam->addParam('URL', 'news_url', URL_LEN, 'KVa', array('MAX_LENGTH_CHECK'));
         $objFormParam->addParam('本文', 'news_comment', LTEXT_LEN, 'KVa', array('MAX_LENGTH_CHECK'));
@@ -213,11 +205,6 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $sqlval['link_method'] = $this->checkLinkMethod($sqlval['link_method']);
         $sqlval['news_date'] = $this->getRegistDate($sqlval);
         unset($sqlval['year'], $sqlval['month'], $sqlval['day']);
-
-        /*追加箇所*/
-        $sqlval['end_news_date'] = $this->getRegist_End_Date($sqlval);
-        unset($sqlval['end_year'], $sqlval['end_month'], $sqlval['end_day']);
-        /*終わり*/
         
         return $objNews->saveNews($sqlval);
     }
@@ -234,19 +221,7 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         return $registDate;
     }
 
-    /*追加箇所*/
-    /**
-     * データの表示開始期限を返す。
-     * @param  Array  $arrPost POSTのグローバル変数
-     * @return string 登録日を示す文字列
-     */
-    public function getRegist_End_Date($arrPost)
-    {
-        $regist_end_Date = $arrPost['end_year'] .'/'. $arrPost['end_month'] .'/'. $arrPost['end_day'];
-
-        return $regist_end_Date;
-    }
-    /*終わり*/
+    
     
     /**
      * チェックボックスの値が空の時は無効な値として1を格納する
