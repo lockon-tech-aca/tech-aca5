@@ -54,7 +54,7 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
         parent::process();
     }
 
-    /*アクション関数をオーバライドし表示終了期限に関して追加*/
+    /*関数をオーバライドし表示終了期限に関して追加*/
     public function action()
     {
         $objNews = new SC_Helper_News_Ex();
@@ -170,6 +170,7 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
         /*終わり*/
         $objFormParam->addParam('タイトル', 'news_title', MTEXT_LEN, 'KVa', array('EXIST_CHECK','MAX_LENGTH_CHECK','SPTAB_CHECK'));
         $objFormParam->addParam('URL', 'news_url', URL_LEN, 'KVa', array('MAX_LENGTH_CHECK'));
+
         $objFormParam->addParam('本文', 'news_comment', LTEXT_LEN, 'KVa', array('MAX_LENGTH_CHECK'));
         $objFormParam->addParam('別ウィンドウで開く', 'link_method', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
     }

@@ -121,15 +121,17 @@
         <table class="list">
             <col width="5%" />
 	    <col width="5%" />
-            <col width="15%" />
+	    <col width="5%" />
+            <col width="10%" />
             <col width="45%" />
             <col width="5%" />
             <col width="5%" />
-            <col width="25%" />
+            <col width="20%" />
             <tr>
                 <th>順位</th>
-                <th>日付</th>
+                <th>表示開始期限</th>
 		<th>表示終了期限</th>
+		<th>表示判定</th>
                 <th>タイトル</th>
                 <th class="edit">編集</th>
                 <th class="delete">削除</th>
@@ -141,6 +143,7 @@
                 <td><!--{math equation="$line_max - $db_rank + 1"}--></td>
                 <td><!--{$arrNews[data].cast_news_date|date_format:"%Y/%m/%d"}--></td>
 		<td><!--{$arrNews[data].cast_end_news_date|date_format:"%Y/%m/%d"}--></td>
+		<td><!--{if $smarty.now > $arrNews[data].cast_end_news_date|strtotime}-->×<!--{else}-->○<!--{/if}--></td>
 		
                 <td class="left">
                     <!--{if $arrNews[data].link_method eq 1 && $arrNews[data].news_url != ""}--><a href="<!--{$arrNews[data].news_url|h}-->" ><!--{$arrNews[data].news_title|h|nl2br}--></a>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.27, created on 2018-01-04 14:41:09
+<?php /* Smarty version 2.6.27, created on 2018-01-04 22:41:18
          compiled from contents/index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'contents/index.tpl', 27, false),array('modifier', 'default', 'contents/index.tpl', 29, false),array('modifier', 'h', 'contents/index.tpl', 29, false),array('modifier', 'var_dump', 'contents/index.tpl', 30, false),array('modifier', 'date_format', 'contents/index.tpl', 142, false),array('modifier', 'nl2br', 'contents/index.tpl', 146, false),array('function', 'html_options', 'contents/index.tpl', 39, false),array('function', 'math', 'contents/index.tpl', 141, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'contents/index.tpl', 27, false),array('modifier', 'default', 'contents/index.tpl', 29, false),array('modifier', 'h', 'contents/index.tpl', 29, false),array('modifier', 'var_dump', 'contents/index.tpl', 30, false),array('modifier', 'date_format', 'contents/index.tpl', 144, false),array('modifier', 'strtotime', 'contents/index.tpl', 146, false),array('modifier', 'nl2br', 'contents/index.tpl', 149, false),array('function', 'html_options', 'contents/index.tpl', 39, false),array('function', 'math', 'contents/index.tpl', 143, false),)), $this); ?>
 
 <div id="admin-contents" class="contents-main">
     <form name="form1" id="form1" method="post" action="?">
@@ -140,15 +140,17 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_esca
         <table class="list">
             <col width="5%" />
 	    <col width="5%" />
-            <col width="15%" />
+	    <col width="5%" />
+            <col width="10%" />
             <col width="45%" />
             <col width="5%" />
             <col width="5%" />
-            <col width="25%" />
+            <col width="20%" />
             <tr>
                 <th>順位</th>
-                <th>日付</th>
+                <th>表示開始期限</th>
 		<th>表示終了期限</th>
+		<th>表示判定</th>
                 <th>タイトル</th>
                 <th class="edit">編集</th>
                 <th class="delete">削除</th>
@@ -187,6 +189,7 @@ $this->_sections['data']['last']       = ($this->_sections['data']['iteration'] 
 </td>
 		<td><?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['cast_end_news_date'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('date_format', true, $_tmp, "%Y/%m/%d") : smarty_modifier_date_format($_tmp, "%Y/%m/%d")); ?>
 </td>
+		<td><?php if (((is_array($_tmp=time())) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) > ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['cast_end_news_date'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('strtotime', true, $_tmp) : strtotime($_tmp))): ?>×<?php else: ?>○<?php endif; ?></td>
 		
                 <td class="left">
                     <?php if (((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['link_method'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) == 1 && ((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['news_url'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) != ""): ?><a href="<?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['news_url'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('h', true, $_tmp) : smarty_modifier_h($_tmp)); ?>
