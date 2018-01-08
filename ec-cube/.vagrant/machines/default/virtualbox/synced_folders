@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"mount_options":["dmode=777","fmode=777","uid=500","gid=500"],"guestpath":"/vagrant","hostpath":"/Users/kazutaka/tech-aca5/ec-cube","disabled":false,"__vagrantfile":true}}}

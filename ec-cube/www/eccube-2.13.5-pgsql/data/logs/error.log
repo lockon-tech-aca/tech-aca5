@@ -1,0 +1,180 @@
+2017/12/29 21:07:15 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/29 21:07:15 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/29 21:07:24 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/29 21:07:24 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/29 21:07:36 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/29 21:07:36 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/29 21:07:59 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/29 21:07:59 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/29 21:08:28 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/29 21:08:28 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/29 21:09:16 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/29 21:09:16 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/29 21:15:23 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/29 21:15:23 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/30 14:27:32 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/30 14:27:32 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/30 14:41:57 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/30 14:41:57 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/30 14:41:57 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): Smarty error: unable to read resource: &quot;/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl&quot; on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+2017/12/30 14:42:12 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/30 14:42:12 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/30 14:42:12 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): Smarty error: unable to read resource: &quot;/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl&quot; on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+2017/12/30 14:44:30 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/30 14:44:30 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/30 14:44:30 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): Smarty error: unable to read resource: &quot;/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl&quot; on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+2017/12/30 14:44:49 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/30 14:44:49 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/30 14:44:49 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): Smarty error: unable to read resource: &quot;/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl&quot; on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+2017/12/30 14:45:01 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/30 14:45:01 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/30 14:45:01 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): Smarty error: unable to read resource: &quot;/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl&quot; on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+2017/12/30 14:45:10 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/30 14:45:10 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/30 14:45:10 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): Smarty error: unable to read resource: &quot;/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl&quot; on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+2017/12/30 14:45:31 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/30 14:45:31 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/30 14:45:31 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): Smarty error: unable to read resource: &quot;/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl&quot; on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+2017/12/30 14:45:48 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2017/12/30 14:45:48 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2017/12/30 14:45:48 [/eccube-2.13.5-pgsql/html/sample/index.php] Warning(E_USER_WARNING): Smarty error: unable to read resource: &quot;/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl&quot; on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+2017/12/30 22:28:05 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [INSERT INTO dtb_news(news_id,news_title,news_url,news_comment,link_method,creator_id,news_date,update_date,rank,create_date) SELECT $1,$2,$3,$4,$5,$6,$7,CURRENT_TIMESTAMP,$8,CURRENT_TIMESTAMP]
+PlaceHolder: [array (
+  0 => 3,
+  1 => 'テスト4',
+  2 => '',
+  3 => 'テスト4',
+  4 => 1,
+  5 => '2',
+  6 => '2018/1/1',
+  7 => 3,
+)]
+MDB2 Error: null value violates not-null constraint
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: EXECUTE mdb2_statement_pgsql_46f93b1fcb73efbc61436dddc1e5ebffd3638e40e (3, 'テスト4', NULL, 'テスト4', 1, '2', '2018/1/1', 3)]
+[Native message: ERROR:  null value in column "delete_date" violates not-null constraint]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[uf4a5oi7i9daj0247lqtgn3k32]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(101): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(208): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(101): SC_Query->insert
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(575): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(873): SC_Query->execute
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1056): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2017/12/30 22:28:44 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [INSERT INTO dtb_news(news_id,news_title,news_url,news_comment,link_method,creator_id,news_date,update_date,rank,create_date) SELECT $1,$2,$3,$4,$5,$6,$7,CURRENT_TIMESTAMP,$8,CURRENT_TIMESTAMP]
+PlaceHolder: [array (
+  0 => 4,
+  1 => 'テスト4',
+  2 => '',
+  3 => 'テスト4です',
+  4 => 1,
+  5 => '2',
+  6 => '2017/12/30',
+  7 => 3,
+)]
+MDB2 Error: null value violates not-null constraint
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: EXECUTE mdb2_statement_pgsql_42e27c361a567d9bb2283374d2ec9ac6d8a8f57ff (4, 'テスト4', NULL, 'テスト4です', 1, '2', '2017/12/30', 3)]
+[Native message: ERROR:  null value in column "delete_date" violates not-null constraint]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[51gtpfu1ldbo8593gbh61oq9o0]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(101): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(208): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(101): SC_Query->insert
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(575): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(873): SC_Query->execute
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1056): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2017/12/30 22:29:51 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [INSERT INTO dtb_news(news_id,news_title,news_url,news_comment,link_method,creator_id,news_date,update_date,rank,create_date) SELECT $1,$2,$3,$4,$5,$6,$7,CURRENT_TIMESTAMP,$8,CURRENT_TIMESTAMP]
+PlaceHolder: [array (
+  0 => 5,
+  1 => 'テスト2',
+  2 => '',
+  3 => 'テスト2です',
+  4 => 1,
+  5 => '2',
+  6 => '2017/12/30',
+  7 => 2,
+)]
+MDB2 Error: null value violates not-null constraint
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: EXECUTE mdb2_statement_pgsql_4ff9f744630d18e88fe6dc22ec23b70ee14b6f540 (5, 'テスト2', NULL, 'テスト2です', 1, '2', '2017/12/30', 2)]
+[Native message: ERROR:  null value in column "delete_date" violates not-null constraint]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[rv49pto8c7721nlplih37ddqm0]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(101): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(208): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(101): SC_Query->insert
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(575): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(873): SC_Query->execute
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1056): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2017/12/30 22:32:07 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [INSERT INTO dtb_news(news_id,news_title,news_url,news_comment,link_method,creator_id,news_date,update_date,rank,create_date) SELECT $1,$2,$3,$4,$5,$6,$7,CURRENT_TIMESTAMP,$8,CURRENT_TIMESTAMP]
+PlaceHolder: [array (
+  0 => 8,
+  1 => 'test',
+  2 => '',
+  3 => 'tt',
+  4 => 1,
+  5 => '2',
+  6 => '2005/1/2',
+  7 => 4,
+)]
+MDB2 Error: null value violates not-null constraint
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: EXECUTE mdb2_statement_pgsql_4952d51ac260d7520d44a342ccfef7a0d3e09d335 (8, 'test', NULL, 'tt', 1, '2', '2005/1/2', 4)]
+[Native message: ERROR:  null value in column "delete_date" violates not-null constraint]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[nv1vqoa9tn3bahpaoqbi4pnl83]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(101): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(208): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(101): SC_Query->insert
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(575): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(873): SC_Query->execute
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1056): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2017/12/31 13:55:31 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [INSERT INTO dtb_news(news_id,news_title,news_url,news_comment,link_method,creator_id,news_date,update_date,rank,create_date) SELECT $1,$2,$3,$4,$5,$6,$7,CURRENT_TIMESTAMP,$8,CURRENT_TIMESTAMP]
+PlaceHolder: [array (
+  0 => 9,
+  1 => 'iui',
+  2 => '',
+  3 => '',
+  4 => 1,
+  5 => '2',
+  6 => '2005/1/3',
+  7 => 3,
+)]
+MDB2 Error: null value violates not-null constraint
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: EXECUTE mdb2_statement_pgsql_45c69dedd4b34d55e64fe8d573667a6b340e08945 (9, 'iui', NULL, NULL, 1, '2', '2005/1/3', 3)]
+[Native message: ERROR:  null value in column "delete_date" violates not-null constraint]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[dlnmecfpb1h9rgqoq675dnq2u2]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(101): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(208): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(101): SC_Query->insert
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(575): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(873): SC_Query->execute
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1056): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
