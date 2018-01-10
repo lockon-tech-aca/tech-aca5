@@ -45,6 +45,7 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
 
         //以下、追記
         //プルダウンメニューの設定
+        //フォーマット
         $this->arrForm_start = array(
             'start_year' => date('Y'),
             'start_month' => date('n'),
@@ -58,6 +59,7 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
 
 
         $objDate = new SC_Date_Ex(ADMIN_NEWS_STARTYEAR);
+        //プルダウンメニューの選択肢
         $this->arr_start_Year = $objDate->getYear();
         $this->arr_start_Month = $objDate->getMonth();
         $this->arr_start_Day = $objDate->getDay();
@@ -124,6 +126,7 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
                 $news = $objNews->getNews($news_id);
                 list($news['year'],$news['month'],$news['day']) = $this->splitNewsDate($news['cast_news_date']);
                 //以下、追記
+                //新着情報一覧の開始期限と終了期限を分割してlistでそれぞれに代入
                 list($news['start_year'],$news['start_month'],$news['start_day']) = $this->splitNewsDate($news['cast_start_news_date']);
                 list($news['end_year'],$news['end_month'],$news['end_day']) = $this->splitNewsDate($news['cast_end_news_date']);
                 //追記終了
@@ -173,6 +176,7 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
 
         $this->arrForm = $objFormParam->getFormParamList();
         //以下、追記
+        //開始期限と終了期限のプルダウンメニューのリストを挿入
         $this->arrForm_start = $objFormParam->getFormParamList();
         $this->arrForm_end = $objFormParam->getFormParamList();
         //追記終了
@@ -191,10 +195,12 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
     {
 
         //以下、オーバーライド。
+        //インサートの準備
         $sqlval['start_news_date'] = $this->getStartDate($sqlval);
         $sqlval['end_news_date'] = $this->getEndDate($sqlval);
         unset($sqlval['start_year'], $sqlval['start_month'], $sqlval['start_day']);
         unset($sqlval['end_year'], $sqlval['end_month'], $sqlval['end_day']);
+        //これらはデータベースのテーブルにないので破棄
 
         //基底クラスのオーバーライドするメソッドを呼び出し
         parent::doRegist($news_id, $sqlval, $objNews);
@@ -212,7 +218,7 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
         parent::lfInitParam($objFormParam);
 
         //以下、オーバーライド。
-
+        //表示開始期限と表示終了期限のプルダウンメニューの初期化
         $objFormParam->addParam('表示開始期限(年)', 'start_year', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('表示開始期限(月)', 'start_month', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('表示開始期限(日)', 'start_day', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
@@ -232,6 +238,7 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
         $objErr = new SC_CheckError_Ex($objFormParam->getHashArray());
 //        parent::lfCheckError($objFormParam);
         $objErr->arrErr = $objFormParam->checkError();
+        //入力情報のエラーチェック
         $objErr->doFunc(array('日付', 'year', 'month', 'day'), array('CHECK_DATE'));
         $objErr->doFunc(array('表示開始期限', 'start_year', 'start_month', 'start_day'), array('CHECK_DATE'));
         $objErr->doFunc(array('表示終了期限', 'end_year', 'end_month', 'end_day'), array('CHECK_DATE'));

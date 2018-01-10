@@ -47,12 +47,22 @@ class SC_CheckError_Ex extends SC_CheckError
         $arrKeyname_end = array($keyname_end_year,$keyname_end_month,$keyname_end_day);
 
 
-        if (isset($this->arrErr[$value[0]] )){
-            return;
+        for($i = 0; $i <= 2;$i++)
+        {
+            if (isset($this->arrErr[$value[$i]] )){
+                return;
+            }
         }
-        else if(isset($this->arrErr[$value[1]])){
-            return;
+
+        for($j = 4; $j <= 6;$j++)
+        {
+            if (isset($this->arrErr[$value[$j]] ))
+            {
+                return;
+            }
         }
+
+
 
         foreach($arrKeyname_start as $key => $start_date)
         {
