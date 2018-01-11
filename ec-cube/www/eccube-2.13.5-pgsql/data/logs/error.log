@@ -1,0 +1,437 @@
+2018/01/07 00:21:04 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [INSERT INTO dtb_news(news_id,news_title,news_url,news_comment,link_method,start_year,start_month,start_day,end_year,end_month,end_day,creator_id,news_date,update_date,rank,create_date) SELECT ?,?,?,?,?,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP,?,CURRENT_TIMESTAMP]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: SELECT NEXTVAL('dtb_news_news_id_seq')]
+[Native message: ERROR:  column "start_year" of relation "dtb_news" does not exist
+行 1: ...s_id,news_title,news_url,news_comment,link_method,start_year...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[2u8r5nkneoen091rbs0qtfest6]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(101): LC_Page_Admin_Contents_Ex->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(68): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(208): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(101): SC_Query->insert
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(575): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(868): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/07 00:26:47 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [UPDATE dtb_news SET news_id= ?, news_title= ?, news_url= ?, news_comment= ?, link_method= ?, start_year= ?, start_month= ?, start_day= ?, end_year= ?, end_month= ?, end_day= ?, news_date= ?, update_date= CURRENT_TIMESTAMP WHERE news_id = ?]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_203b5baada9de708dc3f7688531c5b8f5749b5cec]
+[Native message: ERROR:  column "start_year" of relation "dtb_news" does not exist
+行 1: ... news_url= $3, news_comment= $4, link_method= $5, start_year...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[hagt7605ksrsjtupvtc0cmj815]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(101): LC_Page_Admin_Contents_Ex->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(68): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(208): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(107): SC_Query->update
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(635): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(868): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/07 00:41:04 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [INSERT INTO dtb_news(news_id,news_title,news_url,news_comment,link_method,start_year,start_month,start_day,end_year,end_month,end_day,creator_id,news_date,update_date,rank,create_date) SELECT ?,?,?,?,?,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP,?,CURRENT_TIMESTAMP]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: SELECT NEXTVAL('dtb_news_news_id_seq')]
+[Native message: ERROR:  column "start_year" of relation "dtb_news" does not exist
+行 1: ...s_id,news_title,news_url,news_comment,link_method,start_year...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[qa8mr17bvb9alpjna13t11v1p2]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(101): LC_Page_Admin_Contents_Ex->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(68): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(208): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(101): SC_Query->insert
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(575): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(868): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/07 00:55:22 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [INSERT INTO dtb_news(news_id,news_title,news_url,news_comment,link_method,start_year,start_month,start_day,end_year,end_month,end_day,creator_id,news_date,update_date,rank,create_date) SELECT ?,?,?,?,?,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP,?,CURRENT_TIMESTAMP]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: SELECT NEXTVAL('dtb_news_news_id_seq')]
+[Native message: ERROR:  column "start_year" of relation "dtb_news" does not exist
+行 1: ...s_id,news_title,news_url,news_comment,link_method,start_year...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[3d6momj3dhq0hkq6eqnsa0mkg5]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(101): LC_Page_Admin_Contents_Ex->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(68): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(208): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(101): SC_Query->insert
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(575): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(868): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/07 01:10:19 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [INSERT INTO dtb_news(news_id,news_title,news_url,news_comment,link_method,start_news_date,end_news_date,creator_id,news_date,update_date,rank,create_date) SELECT $1,$2,$3,$4,$5,$6,$7,$8,$9,CURRENT_TIMESTAMP,$10,CURRENT_TIMESTAMP]
+PlaceHolder: [array (
+  0 => 7,
+  1 => '',
+  2 => '',
+  3 => '',
+  4 => 1,
+  5 => '//',
+  6 => '//',
+  7 => '2',
+  8 => '//',
+  9 => 4,
+)]
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: EXECUTE mdb2_statement_pgsql_4faa58d0f8e5fd5d7392fd77206ae04ce69a1e6ba (7, NULL, NULL, NULL, 1, '//', '//', '2', '//', 4)]
+[Native message: ERROR:  invalid input syntax for type timestamp: "//"
+行 1: ...392fd77206ae04ce69a1e6ba (7, NULL, NULL, NULL, 1, '//', '//'...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[0di7eataajcun0t3bkp9r8gt64]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(101): LC_Page_Admin_Contents_Ex->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(75): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(208): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(101): SC_Query->insert
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(575): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(873): SC_Query->execute
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1056): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/07 04:25:05 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date FROM dtb_news WHERE start_news_date >= now() AND end_news_date <= now() del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_17f39c43a5c2502069e1457c74c360d2156fca8597]
+[Native message: ERROR:  syntax error at or near "del_flg"
+行 1: ...art_news_date >= now() AND end_news_date ]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(155): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(52): LC_Page_FrontParts_Bloc_News_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(99): SC_Helper_News_Ex->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(63): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/07 04:25:11 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date FROM dtb_news WHERE start_news_date >= now() AND end_news_date <= now() del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_1755d36665a2d13f1e050382af91fdda9acf93153c]
+[Native message: ERROR:  syntax error at or near "del_flg"
+行 1: ...art_news_date >= now() AND end_news_date ]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(155): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(52): LC_Page_FrontParts_Bloc_News_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(99): SC_Helper_News_Ex->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(63): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/07 04:36:07 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date FROM dtb_news WHERE news_id = 1del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_172f3171736c1a73c08708b94b1188a5c53607cbd2]
+[Native message: ERROR:  syntax error at or near "del_flg"
+行 1: ... as cast_news_date FROM dtb_news WHERE news_id = 1del_flg = ...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(155): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(52): LC_Page_FrontParts_Bloc_News_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(99): SC_Helper_News_Ex->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(66): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/07 04:52:08 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 04:52:08 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date FROM dtb_news WHERE SELECT *, cast(news_date as date) as cast_news_date FROM dtb_news WHERE dtb_news.news_id=1   del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_17901ac8179df4620aac72ad67bb8fa1ea392305b2]
+[Native message: ERROR:  syntax error at or near "SELECT"
+行 1: ...te as date) as cast_news_date FROM dtb_news WHERE SELECT *, ...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(155): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(52): LC_Page_FrontParts_Bloc_News_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(99): SC_Helper_News_Ex->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(70): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/07 04:52:44 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 04:52:44 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date FROM dtb_news WHERE SELECT *, cast(news_date as date) as cast_news_date FROM dtb_news WHERE news_id=1   del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_17a0f84f21c3542b3b9860ea43f664d61e690555a5]
+[Native message: ERROR:  syntax error at or near "SELECT"
+行 1: ...te as date) as cast_news_date FROM dtb_news WHERE SELECT *, ...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(155): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(52): LC_Page_FrontParts_Bloc_News_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(99): SC_Helper_News_Ex->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(70): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/07 05:05:29 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:06:12 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:28:48 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:29:07 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:30:24 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:31:00 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:31:12 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:31:17 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:31:37 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:35:55 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:45:06 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:46:12 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:48:16 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:49:03 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/07 05:54:12 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [UPDATE dtb_news SET news_id= ?, news_title= ?, news_url= ?, news_comment= ?, link_method= ?, start_year= ?, start_month= ?, start_day= ?, end_year= ?, end_month= ?, end_day= ?, start_news_date= ?, end_news_date= ?, news_date= ?, update_date= CURRENT_TIMESTAMP WHERE news_id = ?]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_276aedfa38b4f87c4e6fb47399c4e0e82b1389f15]
+[Native message: ERROR:  column "start_year" of relation "dtb_news" does not exist
+行 1: ... news_url= $3, news_comment= $4, link_method= $5, start_year...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[9b9ppfaoa008ec27vnqqfg32f1]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(68): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(102): LC_Page_Admin_Contents_Ex->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(190): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(209): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(107): SC_Query->update
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(635): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(868): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/07 05:59:24 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/08 16:52:00 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/08 16:57:00 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/08 16:58:03 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/08 17:07:52 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/08 17:08:04 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/08 17:08:17 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/09 23:06:50 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_29fc60c3806de489c1ec140f59e2fad206f1e0669]
+[Native message: ERROR:  column "start_news_date" does not exist
+行 1: ..., cast(news_date as date) as cast_news_date, cast(start_news...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[uagmrjbqo6bvrvggtodd389j04]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(78): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(171): SC_Helper_News_Ex->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(94): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/09 23:11:52 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2154a1263105d730dae5df55946fc51c4129fd9fe]
+[Native message: ERROR:  column "start_news_date" does not exist
+行 1: ..., cast(news_date as date) as cast_news_date, cast(start_news...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[uagmrjbqo6bvrvggtodd389j04]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(78): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(171): SC_Helper_News_Ex->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(94): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/09 23:17:55 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_23b06c49a46db2156307f385af04d5e72d749ca49]
+[Native message: ERROR:  column "start_news_date" does not exist
+行 1: ..., cast(news_date as date) as cast_news_date, cast(start_news...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[uagmrjbqo6bvrvggtodd389j04]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(78): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(171): SC_Helper_News_Ex->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(94): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/09 23:35:35 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2a14089088f83d96d33800ebcfc050a86212388cf]
+[Native message: ERROR:  column "start_news_date" does not exist
+行 1: ..., cast(news_date as date) as cast_news_date, cast(start_news...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[vq96t5nsbb3nhbsqj7qlj1qag7]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(78): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(171): SC_Helper_News_Ex->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(94): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/09 23:39:47 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2fdc2ca3f17bbf9d4610543aaa175e0a38a4ba8cc]
+[Native message: ERROR:  column "start_news_date" does not exist
+行 1: ..., cast(news_date as date) as cast_news_date, cast(start_news...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[i0i16p36cs6t285murkm8hhtu7]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(78): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(171): SC_Helper_News_Ex->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(94): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/09 23:42:18 [/eccube-2.13.5-pgsql/html/admin/mail/history.php] Warning(E_WARNING): Missing argument 4 for SC_PageNavi::__construct(), called in /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/mail/LC_Page_Admin_Mail_History.php on line 120 and defined on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_PageNavi.php(55)] from 192.168.55.1
+2018/01/10 00:06:08 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/10 00:07:11 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/10 00:20:46 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_Query_Ex.php(51)] from 192.168.55.1
+2018/01/11 02:31:53 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(346)] from 192.168.55.1
+2018/01/11 02:34:11 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [UPDATE dtb_news SET news_id= ?, news_title= ?, news_url= ?, news_comment= ?, link_method= ?, start_year= ?, start_month= ?, start_day= ?, end_year= ?, end_month= ?, end_day= ?, start_news_date= ?, end_news_date= ?, news_date= ?, update_date= CURRENT_TIMESTAMP WHERE news_id = ?]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2b5be1786ea3721e7eae0564c1143455f5328b9a3]
+[Native message: ERROR:  column "start_year" of relation "dtb_news" does not exist
+行 1: ... news_url= $3, news_comment= $4, link_method= $5, start_year...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[e6ledc18cfohgdqnsck4cn1td0]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(78): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(112): LC_Page_Admin_Contents_Ex->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(202): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(209): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(107): SC_Query->update
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(635): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(868): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/11 02:46:44 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(346)] from 192.168.55.1
+2018/01/11 03:02:54 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(346)] from 192.168.55.1
