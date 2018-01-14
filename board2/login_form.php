@@ -1,12 +1,22 @@
 <?php
-  require_once './process.php'; // login関数の有効化
-
+  // エラー表示
+  ini_set( 'display_errors', 1 );
+  // 定数を設定
+  define( 'SMARTY_DIR', './libs/' );
   session_start();
 
+  require_once( SMARTY_DIR .'Smarty.class.php' ); // smartyの有効化
+  require_once './process.php';                   // login関数の有効化
+
+  $smarty  = new Smarty; // smartyをインスタンス化
+  $process = new Process;  // プロセスをインスタンス化
+
   $errorMessage = '';
-  $process      = new Process;
-  if (isset($_POST)) {
+  if (!empty($_POST)) {
     $post       = $_POST;
+  } else {
+    $post["name"] = "";
+    $post["password"] = "";
   }
 
   // ログインボタンが押された時
@@ -30,29 +40,13 @@
       }
     }
   }
+
+  // smartyオブジェクト内の変数へ設定
+  $smarty->template_dir = './templates/';
+  $smarty->compile_dir  = './templates_c/';
+  $smarty->config_dir   = './configs/';
+  $smarty->cache_dir    = './cache/';
+  $smarty->assign( 'post', $post );
+  $smarty->assign( 'error', $errorMessage );
+  $smarty->display( 'login_form.tpl' );
 ?>
-
-
-<html>
-<head>
-  <title>データの登録</title>
-</head>
-<body>
-  <form method="POST" action="login_form.php">
-     <div><font color="#ff0000"><?php echo ($errorMessage); ?></font></div>
-    <p>なまえ：<br />
-      <input type="text" name="name" size="25" maxlength="20" />
-    </p>
-    <p>ぱすわーど：<br />
-      <input type="text" name="password" size="25" maxlength="20" />
-    </p>
-    <p>
-      <input type="submit" name="login" value=" ログイン" />
-    </p>
-    <p>
-    <!-- URL要変更 -->
-      <input type="button" name="signup" value=" 新規登録" onClick="location.href='http://localhost/tech-aca5/board2/insert_form.php'" />
-    </p>
-  </form>
-</body>
-</html>
