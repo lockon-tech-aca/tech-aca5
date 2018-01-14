@@ -233,7 +233,7 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         }
 
         return $link_method;
-    }
+}
 
     /**
      * ニュースの日付の値をフロントでの表示形式に合わせるために分割

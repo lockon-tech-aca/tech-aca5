@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.27, created on 2018-01-08 16:30:51
+<?php /* Smarty version 2.6.27, created on 2018-01-15 04:37:06
          compiled from contents/index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'contents/index.tpl', 27, false),array('modifier', 'default', 'contents/index.tpl', 29, false),array('modifier', 'h', 'contents/index.tpl', 29, false),array('modifier', 'date_format', 'contents/index.tpl', 162, false),array('modifier', 'nl2br', 'contents/index.tpl', 166, false),array('function', 'html_options', 'contents/index.tpl', 38, false),array('function', 'math', 'contents/index.tpl', 161, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'contents/index.tpl', 27, false),array('modifier', 'default', 'contents/index.tpl', 29, false),array('modifier', 'h', 'contents/index.tpl', 29, false),array('modifier', 'date_format', 'contents/index.tpl', 173, false),array('modifier', 'nl2br', 'contents/index.tpl', 177, false),array('function', 'html_options', 'contents/index.tpl', 38, false),array('function', 'math', 'contents/index.tpl', 172, false),)), $this); ?>
 
 <div id="admin-contents" class="contents-main">
     <form name="form1" id="form1" method="post" action="?">
@@ -13,7 +13,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_esca
 " />
                 <table>
             <tr>
-                <th>日付<span class="attention"> *</span></th>
+                <th>リリース日<span class="attention"> *</span></th>
                 <td>
                     <?php if (((is_array($_tmp=$this->_tpl_vars['arrErr']['year'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) || ((is_array($_tmp=$this->_tpl_vars['arrErr']['month'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) || ((is_array($_tmp=$this->_tpl_vars['arrErr']['day'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp))): ?><span class="attention"><?php echo ((is_array($_tmp=$this->_tpl_vars['arrErr']['year'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
 <?php echo ((is_array($_tmp=$this->_tpl_vars['arrErr']['month'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
@@ -84,7 +84,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_esca
                 </td>
             </tr>
             <tr>
-                <th>表示開始期限</th>
+                <th>表示開始期限<span class="attention"> *</span></th></th>
                 <td>
                     <?php if (((is_array($_tmp=$this->_tpl_vars['arrErr']['start_year'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) || ((is_array($_tmp=$this->_tpl_vars['arrErr']['start_month'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) || ((is_array($_tmp=$this->_tpl_vars['arrErr']['start_day'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp))): ?><span class="attention"><?php echo ((is_array($_tmp=$this->_tpl_vars['arrErr']['start_year'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
 <?php echo ((is_array($_tmp=$this->_tpl_vars['arrErr']['start_month'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
@@ -111,7 +111,20 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_esca
                 </td>
             </tr>
             <tr>
-                <th>表示終了期限</th>
+                <th rowspan="2">表示終了期限<span class="attention"> *</span></th></th>
+                <td>
+                    <?php if (((is_array($_tmp=$this->_tpl_vars['arrErr']['end_date_select'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp))): ?><span class="attention"><?php echo ((is_array($_tmp=$this->_tpl_vars['arrErr']['end_date_select'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
+</span><?php endif; ?>
+                    <label><input type="radio" name="end_date_select" value="1"<?php if (((is_array($_tmp=$this->_tpl_vars['arrForm']['end_date_select']['value'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) == '1'): ?> checked <?php endif; ?>
+                        <?php if (((is_array($_tmp=$this->_tpl_vars['arrErr']['end_date_select'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp))): ?>style="background-color:<?php echo ((is_array($_tmp=((is_array($_tmp=@ERR_COLOR)) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('h', true, $_tmp) : smarty_modifier_h($_tmp)); ?>
+"<?php endif; ?>/>指定する</label>
+                    <label><input type="radio" name="end_date_select" value=""<?php if (((is_array($_tmp=$this->_tpl_vars['arrForm']['end_date_select']['value'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) == ""): ?> checked <?php endif; ?>
+                        <?php if (((is_array($_tmp=$this->_tpl_vars['arrErr']['end_date_select'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp))): ?>style="background-color:<?php echo ((is_array($_tmp=((is_array($_tmp=@ERR_COLOR)) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('h', true, $_tmp) : smarty_modifier_h($_tmp)); ?>
+"<?php endif; ?>/>指定しない</label>
+
+                </td>
+            </tr>
+            <tr>
                 <td>
                     <?php if (((is_array($_tmp=$this->_tpl_vars['arrErr']['end_year'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) || ((is_array($_tmp=$this->_tpl_vars['arrErr']['end_month'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) || ((is_array($_tmp=$this->_tpl_vars['arrErr']['end_day'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp))): ?><span class="attention"><?php echo ((is_array($_tmp=$this->_tpl_vars['arrErr']['end_year'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
 <?php echo ((is_array($_tmp=$this->_tpl_vars['arrErr']['end_month'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
@@ -137,6 +150,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_esca
                     </select>日
                 </td>
             </tr>
+
 
         </table>
         

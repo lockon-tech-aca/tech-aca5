@@ -48,14 +48,18 @@ class SC_Helper_News_Ex extends SC_Helper_News
 
         $objQuery =& SC_Query_Ex::getSingletonInstance();
 
-        $col = '*, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, cast(end_news_date as date) as cast_end_news_date';
+        $col = '*, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date,
+              cast(end_news_date as date) as cast_end_news_date';
         $table = 'dtb_news';
-        $where_start_date = 'start_news_date <= now()';
-        $where_end_date ='end_news_date >= now()';
+        $where_start_date = "start_news_date <= CURRENT_TIMESTAMP";
+        $where_end_date ="end_news_date + INTERVAL '1' DAY >= CURRENT_TIMESTAMP";
         $where_del_flg ='del_flg = 0';
+//        $where_end_select = "end_date_select_flg = '1' ";
+
 
         $objQuery->setwhere($where_start_date);
         $objQuery->andWhere($where_end_date);
+//        $objQuery->orWhere($where_end_select);
         $where = $objQuery->andWhere($where_del_flg);
 
         $objQuery->setOrder('rank DESC');
@@ -82,7 +86,8 @@ class SC_Helper_News_Ex extends SC_Helper_News
     public function getList($dispNumber = 0, $pageNumber = 0, $has_deleted = false)
     {
         $objQuery =& SC_Query_Ex::getSingletonInstance();
-        $col = '*, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, cast(end_news_date as date) as cast_end_news_date';
+        $col = '*, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+              cast(end_news_date as date) as cast_end_news_date';
         $where = '';
         if (!$has_deleted) {
             $where .= 'del_flg = 0';
