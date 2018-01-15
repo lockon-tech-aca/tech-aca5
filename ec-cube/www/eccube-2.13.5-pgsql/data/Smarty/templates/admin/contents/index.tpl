@@ -172,7 +172,12 @@
                 <td><!--{math equation="$line_max - $db_rank + 1"}--></td>
                 <td><!--{$arrNews[data].cast_news_date|date_format:"%Y/%m/%d"}--></td>
                 <td><!--{$arrNews[data].cast_start_news_date|date_format:"%Y/%m/%d"}--></td>
-                <td><!--{$arrNews[data].cast_end_news_date|date_format:"%Y/%m/%d"}--></td>
+                <td><!--{if $arrNews[data].cast_end_news_date != 'infinity'}-->
+                        <!--{$arrNews[data].cast_end_news_date|date_format:"%Y/%m/%d"}-->
+                    <!--{else}-->
+                        終了期限未設定
+                    <!--{/if}-->
+                </td>
                 <td class="left">
                     <!--{if $arrNews[data].link_method eq 1 && $arrNews[data].news_url != ""}--><a href="<!--{$arrNews[data].news_url|h}-->" ><!--{$arrNews[data].news_title|h|nl2br}--></a>
                     <!--{elseif $arrNews[data].link_method eq 1 && $arrNews[data].news_url == ""}--><!--{$arrNews[data].news_title|h|nl2br}-->

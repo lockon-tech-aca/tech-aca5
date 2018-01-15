@@ -128,7 +128,14 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
                 //以下、追記
                 //新着情報一覧の開始期限と終了期限を分割してlistでそれぞれに代入
                 list($news['start_year'],$news['start_month'],$news['start_day']) = $this->splitNewsDate($news['cast_start_news_date']);
-                list($news['end_year'],$news['end_month'],$news['end_day']) = $this->splitNewsDate($news['cast_end_news_date']);
+                if($news['cast_end_news_date'] == 'infinity'){
+                    $news['end_year'] = null;
+                    $news['end_month'] = null;
+                    $news['end_day'] = null;
+                }else{
+                    list($news['end_year'],$news['end_month'],$news['end_day']) = $this->splitNewsDate($news['cast_end_news_date']);
+                }
+
                 //追記終了
                 $objFormParam->setParam($news);
 
@@ -261,11 +268,11 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
         $objErr->arrErr = $objFormParam->checkError();
         //入力情報のエラーチェック
         $objErr->doFunc(array('日付', 'year', 'month', 'day'), array('CHECK_DATE'));
-        $objErr->doFunc(array( 'end_date_select','表示終了期限','end_year', 'end_month', 'end_day'), array('RADIOBUTTON_SELECT'));
+        $objErr->doFunc(array( 'end_date_select','表示終了期限','end_year', 'end_month', 'end_day'), array('RADIOBUTTON_SELECT')); //ラジオボタンの選択について
         $objErr->doFunc(array('表示開始期限', 'start_year', 'start_month', 'start_day'), array('CHECK_DATE'));
 //        $objErr->doFunc(array('表示終了期限', 'end_year', 'end_month', 'end_day'), array('CHECK_DATE'));
         $objErr->doFunc(array( 'start_year', 'start_month', 'start_day', '表示開始期限',
-                                'end_year', 'end_month', 'end_day','表示終了期限','end_date_select'), array('CHECK_DATE_CONTEXT'));
+                                'end_year', 'end_month', 'end_day','表示終了期限','end_date_select'), array('CHECK_DATE_CONTEXT')); //表示開始期限と表示終了期限の前後関係について
 
 
         return $objErr->arrErr;

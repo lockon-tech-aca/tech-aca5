@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.27, created on 2018-01-15 04:37:06
+<?php /* Smarty version 2.6.27, created on 2018-01-15 19:28:20
          compiled from contents/index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'contents/index.tpl', 27, false),array('modifier', 'default', 'contents/index.tpl', 29, false),array('modifier', 'h', 'contents/index.tpl', 29, false),array('modifier', 'date_format', 'contents/index.tpl', 173, false),array('modifier', 'nl2br', 'contents/index.tpl', 177, false),array('function', 'html_options', 'contents/index.tpl', 38, false),array('function', 'math', 'contents/index.tpl', 172, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'contents/index.tpl', 27, false),array('modifier', 'default', 'contents/index.tpl', 29, false),array('modifier', 'h', 'contents/index.tpl', 29, false),array('modifier', 'date_format', 'contents/index.tpl', 173, false),array('modifier', 'nl2br', 'contents/index.tpl', 182, false),array('function', 'html_options', 'contents/index.tpl', 38, false),array('function', 'math', 'contents/index.tpl', 172, false),)), $this); ?>
 
 <div id="admin-contents" class="contents-main">
     <form name="form1" id="form1" method="post" action="?">
@@ -229,8 +229,13 @@ $this->_sections['data']['last']       = ($this->_sections['data']['iteration'] 
 </td>
                 <td><?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['cast_start_news_date'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('date_format', true, $_tmp, "%Y/%m/%d") : smarty_modifier_date_format($_tmp, "%Y/%m/%d")); ?>
 </td>
-                <td><?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['cast_end_news_date'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('date_format', true, $_tmp, "%Y/%m/%d") : smarty_modifier_date_format($_tmp, "%Y/%m/%d")); ?>
-</td>
+                <td><?php if (((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['cast_end_news_date'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) != 'infinity'): ?>
+                        <?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['cast_end_news_date'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('date_format', true, $_tmp, "%Y/%m/%d") : smarty_modifier_date_format($_tmp, "%Y/%m/%d")); ?>
+
+                    <?php else: ?>
+                        終了期限未設定
+                    <?php endif; ?>
+                </td>
                 <td class="left">
                     <?php if (((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['link_method'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) == 1 && ((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['news_url'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)) != ""): ?><a href="<?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['news_url'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('h', true, $_tmp) : smarty_modifier_h($_tmp)); ?>
 " ><?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrNews'][$this->_sections['data']['index']]['news_title'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('h', true, $_tmp) : smarty_modifier_h($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>

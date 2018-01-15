@@ -1180,3 +1180,810 @@ login_id = admin(0)[5c4co84qc4gs84rth3uotm62o7]
 /vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
 2018/01/15 04:55:26 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(346)] from 192.168.55.1
 2018/01/15 04:58:18 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(346)] from 192.168.55.1
+2018/01/15 05:08:44 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_23cb7b461cd0428bd1c42bf67c342c291f7901ab6]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[moukc8c7gihj1log6ca0jipoa3]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 05:09:21 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2c44b056fb7b588c3089d7f5664c052c1920ce4ab]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[m2e31qt6du6uti1ff0l8cmi675]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 05:11:10 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [INSERT INTO dtb_news(news_id,news_title,news_url,news_comment,link_method,end_date_select,start_news_date,end_news_date,creator_id,news_date,update_date,rank,create_date) SELECT $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,CURRENT_TIMESTAMP,$11,CURRENT_TIMESTAMP]
+PlaceHolder: [array (
+  0 => 22,
+  1 => '佐々さん',
+  2 => '',
+  3 => 'salsas',
+  4 => 1,
+  5 => '1',
+  6 => '2005/4/5',
+  7 => '//',
+  8 => '2',
+  9 => '2006/4/2',
+  10 => 4,
+)]
+MDB2 Error: unknown error
+_doQuery: [Error message: Could not execute statement]
+[Last executed query: EXECUTE mdb2_statement_pgsql_4e5c1ff3a3951cdcee637a2c52621a702ec7ed0a5 (22, '佐々さん', NULL, 'salsas', 1, '1', '2005/4/5', '//', '2', '2006/4/2', 4)]
+[Native message: ERROR:  invalid input syntax for type timestamp: "//"
+行 1: ..., '佐々さん', NULL, 'salsas', 1, '1', '2005/4/5', '//', '2',...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[u6hg8ebfoqu61lq84ofgkc01t4]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(114): LC_Page_Admin_Contents_Ex->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(207): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(209): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(101): SC_Query->insert
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(575): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(873): SC_Query->execute
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1056): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 05:42:54 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Invalid argument supplied for foreach() on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_CheckError_Ex.php(155)] from 192.168.55.1
+2018/01/15 05:42:56 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Invalid argument supplied for foreach() on [/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/SC_CheckError_Ex.php(155)] from 192.168.55.1
+2018/01/15 05:58:31 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type in isset or empty on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1227)] from 192.168.55.1
+2018/01/15 05:58:31 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1233)] from 192.168.55.1
+2018/01/15 05:58:39 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type in isset or empty on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1227)] from 192.168.55.1
+2018/01/15 05:58:39 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1233)] from 192.168.55.1
+2018/01/15 05:59:46 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(346)] from 192.168.55.1
+2018/01/15 06:00:15 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_24b7d9e882a1d4aa20a129bb32093ea78643eaa75]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[n9cf9npc9qbi5dvpg9cim18663]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:02:37 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type in isset or empty on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1227)] from 192.168.55.1
+2018/01/15 06:02:37 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1233)] from 192.168.55.1
+2018/01/15 06:02:42 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type in isset or empty on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1227)] from 192.168.55.1
+2018/01/15 06:02:42 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1233)] from 192.168.55.1
+2018/01/15 06:02:45 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type in isset or empty on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1227)] from 192.168.55.1
+2018/01/15 06:02:45 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1233)] from 192.168.55.1
+2018/01/15 06:02:47 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type in isset or empty on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1227)] from 192.168.55.1
+2018/01/15 06:02:47 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1233)] from 192.168.55.1
+2018/01/15 06:02:53 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type in isset or empty on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1227)] from 192.168.55.1
+2018/01/15 06:02:53 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1233)] from 192.168.55.1
+2018/01/15 06:02:55 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type in isset or empty on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1227)] from 192.168.55.1
+2018/01/15 06:02:55 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1233)] from 192.168.55.1
+2018/01/15 06:02:59 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type in isset or empty on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1227)] from 192.168.55.1
+2018/01/15 06:02:59 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1233)] from 192.168.55.1
+2018/01/15 06:10:51 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2fb57c68d40a8d236e9802bbbb79e3840c1354922]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[h916f8t4sae0e6vl8otugjoa83]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:12:21 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2d163cb02e87e0e8d3cfd2eb121a1bc205c4a9f98]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[fcg477doc9f4ffq7liroe3sj95]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:12:58 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_21a5487add92c0d09f8dfa2068d2e162a96ae8856]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[5lkrr1vgre1dm2f9lig16p9vs2]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:17:47 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_28375b27a723f7eff736e6871b14a078ff44bced0]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[jd9jrplm0b6temp6cgk021ko01]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:19:09 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_29aec19001a3dac5a5b0ca1924278cbab7211fc5c]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[47rbogaoaq8s32aaphik6nv7s6]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:24:30 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_26d976da191614635e6f354bbf14569682485b3e3]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[2uu56dtfdn5eru75n2m88btc94]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(124): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:24:55 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_28ca655fd2e7895f50c850fd5376ae5ca50f6b4d2]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[ntjdq72oob3nnt8h00raj7sg27]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:28:54 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2a8f788ed3a13e09a9371f48da0a158cbb587859d]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[f48ca3m3grqbqas683jjg6med4]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:33:51 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　end_news_date as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2915bbdbbf1580bef48af4058bc5510a358dc80eb]
+[Native message: ERROR:  column "　end_news_date" does not exist
+行 2:             　end_news_date as cast_end_news_date FROM dtb_n...
+                  ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[makf9l50p8smbrvlud5kqahg05]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:34:59 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　end_news_date as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2071dd04d8ad12ed1a6e58388933b548f7d5dc68d]
+[Native message: ERROR:  column "　end_news_date" does not exist
+行 2:             　end_news_date as cast_end_news_date FROM dtb_n...
+                  ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[tk14r35iagplsk0fe0n8v4m801]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:36:24 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　end_news_date as cast_end_news_date FROM dtb_news WHERE news_id = ? AND end_news_date <> infinity AND del_flg = 0   ]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2ba5f322580eb4c6dd55f8eee4a9ce1e5cb43fa48]
+[Native message: ERROR:  column "　end_news_date" does not exist
+行 2:             　end_news_date as cast_end_news_date FROM dtb_n...
+                  ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[mftrudc3g00ikj23cqmuc8at37]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:45:07 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date,CASE WHEN end_news_date = infinity THEN end_news_date = null, FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2207b98412c444a7e85792a75ea80603eb954f2df]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[df047qf7naqr1bt90jumkjkil5]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:45:48 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date,CASE WHEN end_news_date = infinity THEN end_news_date = 0 FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_298e2688460311953f35eddb985b28803946b06a6]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[o8afcsie0on3a3gse4i83qnj74]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:57:13 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date,
+            CASE WHEN end_news_date = 'infinity' THEN null ELSE end_news_date END AS end_news_date2 from dtb_news; FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2100102c66a614012c2f724b27c8a9a2ec7210f4e]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[hqfun7un5inkpo29cj349h7ff1]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(126): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 06:58:15 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date2 as date) as cast_end_news_date,
+            CASE WHEN end_news_date = 'infinity' THEN null ELSE end_news_date END AS end_news_date2 from dtb_news; FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_26e69a3f6af6238d1be43301c93ffd4e6fce58783]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date2 as date) as cast_end_news_...
+                                        ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[67s6asdveevqmb71026lpifsf0]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(126): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 07:13:22 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date2 as date) as cast_end_news_date,
+              CASE WHEN end_news_date = 'infinity' THEN ELSE end_news_date END AS end_news_date2 from dtb_news; FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_25d6ae028cc54d6c961abe41e2bf554990b062b56]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date2 as date) as cast_end_news_...
+                                        ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[nn2fo68n1c1rs7gcbkivudq0b0]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(126): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:13:58 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date2 as date) as cast_end_news_date,
+              CASE WHEN end_news_date = 'infinity' THEN ELSE end_news_date END AS end_news_date2 from dtb_news FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_21f1b0d4c11a66c4f5a518fb77210df278e08dfd9]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date2 as date) as cast_end_news_...
+                                        ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[idfke48mrl97aclq5vjgnj1iq3]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(126): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:14:32 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2dd3dff6c6305a77ddc4acb956043bd7083707dab]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[lo8s1fq6fll7vvsq2trbbf4ns2]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:17:00 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date,
+              CASE WHEN end_news_date = 'infinity' THEN ELSE end_news_date END AS end_news_date2 from dtb_news FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2e87b9014aa389cc671fb2f8c889e318650e80991]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[2uijlrfr2cnlo1n65jm05epkm6]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(126): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:18:43 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(346)] from 192.168.55.1
+2018/01/15 18:23:05 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+            　cast(end_news_date as date) as cast_end_news_date FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2586c9c580741f621a785a76467af19d028ec5fd4]
+[Native message: ERROR:  syntax error at or near "as"
+行 2:             　cast(end_news_date as date) as cast_end_news_d...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[2sranbolukgp2qpov81o2hlep7]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:29:12 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(346)] from 192.168.55.1
+2018/01/15 18:29:34 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+              CASE 
+                WHEN end_news_date = 'infinity' THEN 
+                    cast(CURRENT_TIMESTAMP-INTERVAL'1'DAY as date) 
+                ELSE 
+                    cast(end_news_date as date) 
+              END AS cast_end_news_date from dtb_news
+            　 FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2f4b3cfadf5988cc1f32004e3152d204b0fc0a1e8]
+[Native message: ERROR:  syntax error at or near "FROM"
+行 8:             　 FROM dtb_news WHERE news_id = $1 AND del_flg ...
+                     ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[jmkh25p1k66chrrkjs32f4s0m7]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(131): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:32:25 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+              CASE 
+                WHEN end_news_date = 'infinity' THEN 
+                    cast(CURRENT_TIMESTAMP-INTERVAL'1'DAY as date) 
+                ELSE 
+                    cast(end_news_date as date) 
+              END AS cast_end_news_date from dtb_news
+            　 FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2b0573d375314dfc4e302975b187df48549548e4d]
+[Native message: ERROR:  syntax error at or near "FROM"
+行 8:             　 FROM dtb_news WHERE news_id = $1 AND del_flg ...
+                     ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[6devdjkvifgq40komijccmoie6]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(131): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:33:56 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+              CASE 
+                WHEN end_news_date = 'infinity' THEN 
+                    cast(CURRENT_TIMESTAMP-INTERVAL'1'DAY as date) 
+                ELSE 
+                    cast(end_news_date as date) 
+              END AS cast_end_news_date from dtb_news
+            　 FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2db55a29cb1f695752dfa1e2b4494bceced2716ff]
+[Native message: ERROR:  syntax error at or near "FROM"
+行 8:             　 FROM dtb_news WHERE news_id = $1 AND del_flg ...
+                     ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[eku4cdt511340jgs34s3daft07]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(131): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:39:59 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(346)] from 192.168.55.1
+2018/01/15 18:40:57 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+              CASE 
+                WHEN end_news_date = \'infinity\' THEN 
+                    cast(CURRENT_TIMESTAMP-INTERVAL\'1\'DAY as date) 
+                ELSE 
+                    cast(end_news_date as date) 
+              END AS cast_end_news_date from dtb_news
+            　 FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2650067562e7b3a0b88596545d7d081512bbd00ea]
+[Native message: ERROR:  syntax error at or near "\"
+行 3:                 WHEN end_news_date = \'infinity\' THEN 
+                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[cp9g35u9lvmmippce34tub7056]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(131): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:43:12 [/eccube-2.13.5-pgsql/html/index.php] Warning(E_WARNING): strlen() expects parameter 1 to be string, object given on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(346)] from 192.168.55.1
+2018/01/15 18:48:34 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+              CASE 
+                WHEN end_news_date = \'infinity\' THEN 
+                    cast(CURRENT_TIMESTAMP-INTERVAL\'1\'DAY as date) 
+                ELSE 
+                    cast(end_news_date as date) 
+              END AS cast_end_news_date from dtb_news
+            　 FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_25588aefa1eeecb8254c71ddc4a82ff912ddb2cef]
+[Native message: ERROR:  syntax error at or near "\"
+行 3:                 WHEN end_news_date = \'infinity\' THEN 
+                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[7i5038cntr3tssefa3hfbj2ot7]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(131): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:49:56 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+              CASE 
+                WHEN end_news_date = \'infinity\' THEN 
+                    cast(CURRENT_TIMESTAMP-INTERVAL\'1\'DAY as date) 
+                ELSE 
+                    cast(end_news_date as date) 
+              END AS cast_end_news_date from dtb_news
+            　 FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_223edca044d208f584f5fa4364be0716f6fff6523]
+[Native message: ERROR:  syntax error at or near "\"
+行 3:                 WHEN end_news_date = \'infinity\' THEN 
+                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[sruhb3c32c3nkdh2q0fpfrg9r5]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(127): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(131): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:54:33 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+              CASE 
+                WHEN end_news_date = \'infinity\' THEN 
+                    cast(CURRENT_TIMESTAMP-INTERVAL\'1\'DAY as date) 
+                ELSE 
+                    cast(end_news_date as date) 
+              END AS cast_end_news_date from dtb_news
+            　 FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_28a67ccd6cc8cd9ba54b8c830120e6bd805133fbd]
+[Native message: ERROR:  syntax error at or near "\"
+行 3:                 WHEN end_news_date = \'infinity\' THEN 
+                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[k23vn3o4hink23h6nli4ku2jo4]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(131): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:56:28 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+              CASE 
+                WHEN end_news_date = 'infinity' THEN 
+                    cast(CURRENT_TIMESTAMP-INTERVAL'1'DAY as date) 
+                ELSE 
+                    cast(end_news_date as date) 
+              END AS cast_end_news_date from dtb_news
+            　 FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_258c66ca10da44bb55ef181d91458b67f6f47f241]
+[Native message: ERROR:  syntax error at or near "FROM"
+行 8:             　 FROM dtb_news WHERE news_id = $1 AND del_flg ...
+                     ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[7scrr02eukaa8h39co940q8cd6]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(131): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 18:59:04 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+              CASE 
+                WHEN end_news_date = 'infinity' THEN 
+                    cast(CURRENT_TIMESTAMP-INTERVAL'1'DAY as date) 
+                ELSE 
+                    cast(end_news_date as date) 
+              END AS cast_end_news_date
+            　 FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_25725c3678f232cc978d9486ebbfc984f40624296]
+[Native message: ERROR:  syntax error at or near "　"
+行 8:             　 FROM dtb_news WHERE news_id = $1 AND del_flg ...
+                  ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[810350ghukiqqqttbpimknm0i4]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(131): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 19:00:39 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+ FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2e391957b709ba6297d21853fb13007c4490c5a23]
+[Native message: ERROR:  syntax error at or near "FROM"
+行 2:  FROM dtb_news WHERE news_id = $1 AND del_flg = 0   
+       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[qo4vp9g528p45n9saj1oc4u330]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(126): SC_Helper_News_Ex::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(125): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 19:19:07 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
+              CASE 
+                WHEN end_news_date = 'infinity' THEN 
+                     '終了期限なし'
+                ELSE 
+                    cast(end_news_date as date) 
+              END AS cast_end_news_date FROM dtb_news WHERE del_flg = 0  ORDER BY rank DESC ]
+MDB2 Error: unknown error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_34310e2a6ff090c55df9f34ac591af15740d627d8]
+[Native message: ERROR:  invalid input syntax for type date: "終了期限なし"
+行 4:                      '終了期限なし'
+                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[qo4vp9g528p45n9saj1oc4u330]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(80): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(68): LC_Page_Admin_Contents_Ex->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(181): SC_Helper_News_Ex->getList
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/helper_extends/SC_Helper_News_Ex.php(109): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/15 19:28:33 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type in isset or empty on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1227)] from 192.168.55.1
+2018/01/15 19:28:33 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1233)] from 192.168.55.1
+2018/01/15 19:29:02 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type in isset or empty on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1227)] from 192.168.55.1
+2018/01/15 19:29:02 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Warning(E_WARNING): Illegal offset type on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_CheckError.php(1233)] from 192.168.55.1

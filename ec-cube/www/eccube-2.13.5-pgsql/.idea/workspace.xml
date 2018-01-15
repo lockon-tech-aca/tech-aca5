@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/Smarty/templates/admin/contents/index.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1414">
-              <caret line="93" column="21" lean-forward="true" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+            <state relative-caret-position="560">
+              <caret line="177" column="31" lean-forward="false" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -24,8 +24,8 @@
       <file leaf-file-name="SC_Helper_News_Ex.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/class_extends/helper_extends/SC_Helper_News_Ex.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-420">
-              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="662">
+              <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -34,28 +34,8 @@
       <file leaf-file-name="LC_Page_Admin_Contents_Ex.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="129" column="136" lean-forward="false" selection-start-line="129" selection-start-column="136" selection-end-line="129" selection-end-column="136" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SC_CheckError_Ex.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/class_extends/SC_CheckError_Ex.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="76" column="87" lean-forward="true" selection-start-line="76" selection-start-column="87" selection-end-line="76" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SC_CheckError.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/class/SC_CheckError.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-23">
-              <caret line="1225" column="0" lean-forward="true" selection-start-line="1225" selection-start-column="0" selection-end-line="1225" selection-end-column="0" />
+            <state relative-caret-position="557">
+              <caret line="133" column="44" lean-forward="false" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -64,28 +44,18 @@
       <file leaf-file-name="SC_FormParam.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/class/SC_FormParam.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1911">
-              <caret line="111" column="9" lean-forward="false" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
+            <state relative-caret-position="271">
+              <caret line="111" column="23" lean-forward="false" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LC_Page_Admin_Contents.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/class/pages/admin/contents/LC_Page_Admin_Contents.php">
+      <file leaf-file-name="SC_CheckError_Ex.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/class_extends/SC_CheckError_Ex.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4452">
-              <caret line="232" column="9" lean-forward="true" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SC_Helper_News.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/class/helper/SC_Helper_News.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="88" column="24" lean-forward="false" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="24" />
+            <state relative-caret-position="189">
+              <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -94,8 +64,8 @@
       <file leaf-file-name="LC_Page_FrontParts_Bloc_News_Ex.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+            <state relative-caret-position="210">
+              <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -105,13 +75,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>keyname</find>
-      <find>add</find>
-      <find>g</find>
       <find>splitNewsDate</find>
       <find>arrNews</find>
       <find>tpl</find>
-      <find>get</find>
       <find>getNews</find>
       <find>cast_news_date</find>
       <find>doFunc</find>
@@ -119,7 +85,6 @@
       <find>checkError</find>
       <find>checkdate</find>
       <find>check_date</find>
-      <find>getMode</find>
       <find>sfDeleteRankRecord</find>
       <find>getform</find>
       <find>addparam</find>
@@ -135,6 +100,11 @@
       <find>save</find>
       <find>link</find>
       <find>CHECK_DATE</find>
+      <find>get</find>
+      <find>getMode</find>
+      <find>select</find>
+      <find>getsql</find>
+      <find>set</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -148,10 +118,10 @@
         <option value="$PROJECT_DIR$/data/class_extends/SC_Query_Ex.php" />
         <option value="$PROJECT_DIR$/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php" />
         <option value="$PROJECT_DIR$/data/class/pages/admin/contents/LC_Page_Admin_Contents.php" />
-        <option value="$PROJECT_DIR$/data/class_extends/helper_extends/SC_Helper_News_Ex.php" />
-        <option value="$PROJECT_DIR$/data/Smarty/templates/admin/contents/index.tpl" />
-        <option value="$PROJECT_DIR$/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php" />
         <option value="$PROJECT_DIR$/data/class_extends/SC_CheckError_Ex.php" />
+        <option value="$PROJECT_DIR$/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php" />
+        <option value="$PROJECT_DIR$/data/Smarty/templates/admin/contents/index.tpl" />
+        <option value="$PROJECT_DIR$/data/class_extends/helper_extends/SC_Helper_News_Ex.php" />
       </list>
     </option>
   </component>
@@ -167,9 +137,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="878" />
-    <option name="y" value="5" />
-    <option name="width" value="1047" />
+    <option name="x" value="544" />
+    <option name="width" value="1381" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
@@ -187,7 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,7 +211,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,12 +253,13 @@
       <workItem from="1515607807695" duration="142000" />
       <workItem from="1515662319558" duration="21454000" />
       <workItem from="1515956384608" duration="645000" />
-      <workItem from="1515957350682" duration="2833000" />
+      <workItem from="1515957350682" duration="10839000" />
+      <workItem from="1516007308039" duration="5118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69985000" />
+    <option name="totallyTimeSpent" value="83109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -300,13 +270,13 @@
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -553,13 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/class_extends/SC_FormParam_Ex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/class/SC_Date.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2247">
@@ -572,20 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/class/SC_Query.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-359">
-          <caret line="437" column="32" lean-forward="false" selection-start-line="437" selection-start-column="32" selection-end-line="437" selection-end-column="32" />
-          <folding>
-            <marker date="1515248257365" expanded="true" signature="15209:15244" ph="INSERT INTO ${$table}... " />
-            <marker date="1515248257365" expanded="true" signature="15237:15244" ph="SELECT ${$st... " />
-            <marker date="1515248257365" expanded="true" signature="17099:17117" ph="UPDATE ${$ta... " />
-            <marker date="1515248257365" expanded="true" signature="21677:21689" ph="DELETE FROM " />
-            <marker date="1515248257365" expanded="true" signature="21770:21833" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -654,74 +603,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php">
+    <entry file="file://$PROJECT_DIR$/data/class/SC_CheckError.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+        <state relative-caret-position="23919">
+          <caret line="1237" column="32" lean-forward="true" selection-start-line="1237" selection-start-column="32" selection-end-line="1237" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/class/SC_FormParam.php">
+    <entry file="file://$PROJECT_DIR$/data/class_extends/SC_FormParam_Ex.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1911">
-          <caret line="111" column="9" lean-forward="false" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/class/pages/admin/contents/LC_Page_Admin_Contents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="88" column="30" lean-forward="false" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/class/helper/SC_Helper_News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="88" column="24" lean-forward="false" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="24" />
+        <state relative-caret-position="124">
+          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/class/pages/admin/contents/LC_Page_Admin_Contents.php">
+    <entry file="file://$PROJECT_DIR$/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4452">
-          <caret line="232" column="9" lean-forward="true" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/Smarty/templates/admin/contents/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1414">
-          <caret line="93" column="21" lean-forward="true" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/class_extends/helper_extends/SC_Helper_News_Ex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="129" column="136" lean-forward="false" selection-start-line="129" selection-start-column="136" selection-end-line="129" selection-end-column="136" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/class/SC_CheckError.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="1225" column="0" lean-forward="true" selection-start-line="1225" selection-start-column="0" selection-end-line="1225" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/class_extends/SC_CheckError_Ex.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="76" column="87" lean-forward="true" selection-start-line="76" selection-start-column="87" selection-end-line="76" selection-end-column="87" />
+        <state relative-caret-position="189">
+          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/class/SC_FormParam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="111" column="23" lean-forward="false" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/class/SC_Query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="340" column="16" lean-forward="true" selection-start-line="340" selection-start-column="16" selection-end-line="340" selection-end-column="16" />
+          <folding>
+            <marker date="1515248257365" expanded="true" signature="15209:15244" ph="INSERT INTO ${$table}... " />
+            <marker date="1515248257365" expanded="true" signature="15237:15244" ph="SELECT ${$st... " />
+            <marker date="1515248257365" expanded="true" signature="17099:17117" ph="UPDATE ${$ta... " />
+            <marker date="1515248257365" expanded="true" signature="21677:21689" ph="DELETE FROM " />
+            <marker date="1515248257365" expanded="true" signature="21770:21833" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="133" column="44" lean-forward="false" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/class_extends/helper_extends/SC_Helper_News_Ex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/Smarty/templates/admin/contents/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="177" column="31" lean-forward="false" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
           <folding />
         </state>
       </provider>

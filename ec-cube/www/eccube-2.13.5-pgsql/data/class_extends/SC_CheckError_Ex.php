@@ -43,7 +43,7 @@ class SC_CheckError_Ex extends SC_CheckError
         $keyname_end_month = $this->arrParam[$value[5]];
         $keyname_end_day = $this->arrParam[$value[6]];
         $disp_name_end = $value[7];
-        $key_name_end_select = $this->arrParam[$value[7]];
+        $key_name_end_select = $this->arrParam[$value[8]];
         $arrKeyname_start = array($keyname_start_year,$keyname_start_month,$keyname_start_day);
         $arrKeyname_end = array($keyname_end_year,$keyname_end_month,$keyname_end_day);
 
@@ -55,7 +55,7 @@ class SC_CheckError_Ex extends SC_CheckError
             }
         }
 
-        for($j = 4; $j <= 7;$j++)
+        for($j = 4; $j <= 8;$j++)
         {
             if (isset($this->arrErr[$value[$j]] ))
             {
@@ -139,7 +139,8 @@ class SC_CheckError_Ex extends SC_CheckError
              if($key_name2_year || $key_name2_month || $key_name2_day)
              {
                  $this->arrErr[$value[2]] =
-                     "※ {$disp_name}を指定するには「{$disp_name}を指定する」を選択してください。<br />";
+                     "※ {$disp_name}を指定するには「{$disp_name}を指定する」を選択してください。<br />
+                        　 指定しない場合は{$disp_name}には何も入力しないでください。<br />";
              }else
              {
                  return;
@@ -148,8 +149,15 @@ class SC_CheckError_Ex extends SC_CheckError
          {
              if(!($key_name2_year) || !($key_name2_month) || !($key_name2_day))//どれかに値が入っていない場合
              {
-                 $key_end_date=array($disp_name,$key_name2_year,$key_name2_month,$key_name2_day);
-                 $this->CHECK_DATE($key_end_date);  //CHECK_DATEメソッドに投げてエラー表示
+                 $key_end_date = array($value[2],$value[3],$value[4]);
+                 $disp_name_date = array('表示終了期限(年)','表示終了期限(月)','表示終了期限(日)');
+                 foreach($key_end_date as $key => $date_value)
+                 {
+                     $this -> EXIST_CHECK(array($disp_name_date[$key],$date_value));  //値が入っていない部分にエラー表示
+                 }
+                 $this->CHECK_DATE(array($value[1],$key_end_date) );  //CHECK_DATEメソッドに投げてエラー表示
+
+
 
              }else
              {
