@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ログイン</title>
+    </head>
+
+    <body>
+        <h2>ログイン</h2>
+        <form method="post" action="login.php">
+            ユーザ名：<input type="text" name="name"><br>
+            パスワード：<input type="password" name="password">
+            <input type="submit" name="login" value="ログイン">
+        </form>
+        {if isset($error)} <p>{$error}</p>
+        {/if}
+    </body>
+</html>
