@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # テクアカ5期
 
 This is a repository of tech-aca 5th term.
@@ -106,3 +107,6 @@ This is a repository of tech-aca 5th term.
 ## 7. 卒業課題
 
 ### 別途案内します
+=======
+# tech-aca5_hina_kinugawa
+>>>>>>> origin/working
