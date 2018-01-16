@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant/www":{"guestpath":"/vagrant/www","hostpath":"C:/xampp/htdocs/tech-aca5/board3/www","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/xampp/htdocs/tech-aca5/board3","disabled":false,"__vagrantfile":true}}}

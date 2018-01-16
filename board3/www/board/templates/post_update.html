@@ -1,0 +1,15 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>編集</title>
+</head>
+<body>
+<h2>編集</h2>
+<form method="post" action="post_update.php">
+    <textarea name="contents" row="8" cols="40">{$contents['contents']}</textarea>
+    <input type="hidden" name="id" value="{$id}"><br>
+    <input type="submit" name="update" value="完了"><br>
+    <input type="submit" name="delete" value="投稿を削除する"><br>
+</form>
+</body>
+</html>
