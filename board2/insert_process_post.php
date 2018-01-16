@@ -1,5 +1,6 @@
 <?php
 require_once 'DbManager.php';
+session_start();
 
 try {
     //データベースの接続を確立
@@ -8,7 +9,7 @@ try {
     $stt = $db->prepare('INSERT INTO post_table(contents, user_id) VALUES(:contents, :user_id)');
     //INSERT命令にポストデータの内容をセット
     $stt->bindValue(':contents', $_POST['contents']);
-    $stt->bindValue(':user_id', $_POST['user_id']);
+    $stt->bindValue(':user_id', $_SESSION['user_id']);
     //INSERT命令を実行
     $stt->execute();
     $db = NULL;

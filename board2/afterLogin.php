@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'DbManager.php';
 require_once 'Encode.php';
 ?>
@@ -9,7 +10,7 @@ require_once 'Encode.php';
 <body>
 <table border="1">
     <tr>
-        <th>user_id</th><th>contents</th>
+        <th>投稿id</th><th>投稿者id</th><th>投稿内容</th>
     </tr>
     <?php
     try{
@@ -22,6 +23,7 @@ require_once 'Encode.php';
         while($row = $stt->fetch(PDO::FETCH_ASSOC)){
             ?>
             <tr>
+                <td><?php e($row['id']); ?></td>
                 <td><?php e($row['user_id']); ?></td>
                 <td><?php e($row['contents']); ?></td>
             </tr>
@@ -44,5 +46,11 @@ require_once 'Encode.php';
         <input type="submit" />
     </p>
 </form>
+<input type="button" onclick="php:location.href='update.php'" value="投稿の編集" />
+<input type="button" onclick="php:location.href='delete.php'" value="投稿の削除" />
+<?php
+echo $_SESSION['user_id'];
+echo $_SESSION['name_login'];
+?>
 </body>
 </html>

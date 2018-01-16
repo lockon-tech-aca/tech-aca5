@@ -9,20 +9,6 @@ require_once 'Encode.php';
     <title>掲示板2</title>
 </head>
 <body>
-新規登録
-<form action="insert_process_signUp.php" method="post">
-    username:<input type="text" name="name_signUp"><br />
-    password:<input type="text" name="password_signUp"><br />
-    <input type="submit" name="register" value="登録">
-</form><br />
-
-ログイン
-<form action="login.php" method="post">
-    username:<input type="text" name="name_login"><br />
-    password:<input type="text" name="password_login"><br />
-    <input type="submit" name="login" value="ログイン">
-</form><br>
-
 投稿一覧
 <table border="1">
     <tr>
@@ -48,5 +34,16 @@ require_once 'Encode.php';
     }
     ?>
 </table>
+<form method="POST" action="update_process_post.php">
+    <p>
+        投稿ID:<br />
+        <input type="text" name="id" size="25" maxlength="10" />
+    </p><p>
+        本文:<br />
+        <input type="text" name="contents" size="100" maxlength="200" />
+    </p><p>
+        <input type="submit" />
+    </p>
+</form>
 </body>
 </html>
