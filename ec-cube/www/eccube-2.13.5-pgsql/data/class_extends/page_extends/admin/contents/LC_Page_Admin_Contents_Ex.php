@@ -94,7 +94,10 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
             case 'pre_edit':
                 $news = $objNews->getNews($news_id);
                 list($news['year'],$news['month'],$news['day']) = $this->splitNewsDate($news['cast_news_date']);
+                
+                /*追加箇所*/
                 list($news['end_year'],$news['end_month'],$news['end_day']) = $this->splitNewsDate($news['cast_end_news_date']);
+                /*終わり*/
                 
                 $objFormParam->setParam($news);
 
@@ -148,8 +151,11 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
         $objErr = new SC_CheckError_Ex($objFormParam->getHashArray());
         $objErr->arrErr = $objFormParam->checkError();
         $objErr->doFunc(array('日付', 'year', 'month', 'day'), array('CHECK_DATE'));
+        
+        /*追加箇所*/
         $objErr->doFunc(array('表示終了期限', 'end_year', 'end_month', 'end_day'), array('CHECK_DATE'));
-
+        /*終わり*/
+        
         return $objErr->arrErr;
     }
 
@@ -167,6 +173,7 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
         $objFormParam->addParam('表示終了日付(年)', 'end_year', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('表示終了日付(月)', 'end_month', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('表示終了日付(日)', 'end_day', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('無期限表示', 'indefinite_period_flag', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
         /*終わり*/
         $objFormParam->addParam('タイトル', 'news_title', MTEXT_LEN, 'KVa', array('EXIST_CHECK','MAX_LENGTH_CHECK','SPTAB_CHECK'));
         $objFormParam->addParam('URL', 'news_url', URL_LEN, 'KVa', array('MAX_LENGTH_CHECK'));
@@ -194,6 +201,8 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
         /*追加箇所*/
         $sqlval['end_news_date'] = $this->getRegist_End_Date($sqlval);
         unset($sqlval['end_year'], $sqlval['end_month'], $sqlval['end_day']);
+
+        $sqlval['indefinite_period_flag'] = $this->checkLinkMethod($sqlval['indefinite_period_flag']);
         /*終わり*/
         
         return $objNews->saveNews($sqlval);

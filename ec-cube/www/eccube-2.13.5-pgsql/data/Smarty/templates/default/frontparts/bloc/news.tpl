@@ -35,9 +35,25 @@
                     <dl class="newslist">
 			
 			<!--{*追加箇所*}-->
-			<!--{if $smarty.now > $arrNews[data].cast_end_news_date|strtotime}-->
+			<!--{if $arrNews[data].indefinite_period_flag eq "2"}-->
+			<dt>表示開始期限<br><!--{$date_array[0]}-->年<!--{$date_array[1]}-->月<!--{$date_array[2]}-->日</dt>
+			<dt>表示終了期限<br>無期限</dt>
+			<dt>
+                            <a
+				<!--{if $arrNews[data].news_url}--> href="<!--{$arrNews[data].news_url}-->" <!--{if $arrNews[data].link_method eq "2"}--> target="_blank"
+                                <!--{/if}-->
+				<!--{/if}-->
+				>
+				<!--{$arrNews[data].news_title|h|nl2br}--></a>
+			</dt>
+			<dd class="mini"><!--{$arrNews[data].news_comment|h|nl2br}--></dd>
+
+			
+			
+			<!--{elseif $smarty.now|date_format:"%Y-%m-%d" > $arrNews[data].cast_end_news_date}-->
 			<!--{else}-->
 			<!--{*終わり*}-->
+
 			
 			<dt>表示開始期限<br><!--{$date_array[0]}-->年<!--{$date_array[1]}-->月<!--{$date_array[2]}-->日</dt>
 			<dt>表示終了期限<br><!--{$end_date_array[0]}-->年<!--{$end_date_array[1]}-->月<!--{$end_date_array[2]}-->日</dt>
@@ -53,6 +69,8 @@
 			
 			<!--{*追加箇所*}-->
 			<!--{/if}-->
+		
+			
 			<!--{*終わり*}-->
 			
                     </dl>

@@ -27,7 +27,6 @@
         <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
         <input type="hidden" name="mode" value="" />
         <input type="hidden" name="news_id" value="<!--{$arrForm.news_id.value|default:$tpl_news_id|h}-->" />
-	<!--{$test|@var_dump}-->
         <!--{* ▼登録テーブルここから *}-->
         <table>
             <tr>
@@ -64,6 +63,8 @@
                         <option value="" selected="selected">--</option>
                         <!--{html_options options=$arrDay selected=$arrForm.end_day.value}-->
                     </select>日
+		    <!--{*追加箇所*}-->
+		    <label><input type="checkbox" name="indefinite_period_flag" value="2" <!--{if $arrForm.indefinite_period_flag.value eq 2}--> checked <!--{/if}--> /> 無期限表示</label>
                 </td>
             </tr>
             <tr>
