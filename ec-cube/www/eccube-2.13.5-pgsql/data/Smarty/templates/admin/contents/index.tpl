@@ -76,7 +76,13 @@
                 </td>
             </tr>
             <tr>
-                <th>表示開始期限<span class="attention"> *</span></th></th>
+                <th rowspan="2">表示開始期限</th>
+                <td>
+                    表示開始期限を指定したい場合は以下の記入欄に終了日を入力してください<br />
+                    入力しなかった場合は登録が完了した瞬間に表示が開始されます。
+                </td>
+            </tr>
+            <tr>
                 <td>
                     <!--{if $arrErr.start_year || $arrErr.start_month || $arrErr.start_day}--><span class="attention"><!--{$arrErr.start_year}--><!--{$arrErr.start_month}--><!--{$arrErr.start_day}--></span><!--{/if}-->
                     <select name="start_year" <!--{if $arrErr.start_year || $arrErr.start_month || $arrErr.start_day }-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
@@ -94,14 +100,10 @@
                 </td>
             </tr>
             <tr>
-                <th rowspan="2">表示終了期限<span class="attention"> *</span></th></th>
+                <th rowspan="2">表示終了期限</th>
                 <td>
-                    <!--{if $arrErr.end_date_select}--><span class="attention"><!--{$arrErr.end_date_select}--></span><!--{/if}-->
-                    <label><input type="radio" name="end_date_select" value="1"<!--{if $arrForm.end_date_select.value eq "1"}--> checked <!--{/if}-->
-                        <!--{if $arrErr.end_date_select}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->/>指定する</label>
-                    <label><input type="radio" name="end_date_select" value=""<!--{if $arrForm.end_date_select.value eq ""}--> checked <!--{/if}-->
-                        <!--{if $arrErr.end_date_select}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->/>指定しない</label>
-
+                    表示終了期限を指定したい場合は以下の記入欄に終了日を入力してください<br />
+                    入力しなかった場合は表示終了期限が未指定になります。
                 </td>
             </tr>
             <tr>
@@ -171,11 +173,18 @@
                 <!--{assign var=db_rank value="`$arrNews[data].rank`"}-->
                 <td><!--{math equation="$line_max - $db_rank + 1"}--></td>
                 <td><!--{$arrNews[data].cast_news_date|date_format:"%Y/%m/%d"}--></td>
-                <td><!--{$arrNews[data].cast_start_news_date|date_format:"%Y/%m/%d"}--></td>
-                <td><!--{if $arrNews[data].cast_end_news_date != 'infinity'}-->
+                <td>
+                    <!--{if $arrNews[data].start_news_date !== null}-->
+                        <!--{$arrNews[data].cast_start_news_date|date_format:"%Y/%m/%d"}-->
+                    <!--{else}-->
+                        未指定
+                    <!--{/if}-->
+                </td>
+                <td>
+                    <!--{if $arrNews[data].cast_end_news_date !== null}-->
                         <!--{$arrNews[data].cast_end_news_date|date_format:"%Y/%m/%d"}-->
                     <!--{else}-->
-                        終了期限未設定
+                        未指定
                     <!--{/if}-->
                 </td>
                 <td class="left">

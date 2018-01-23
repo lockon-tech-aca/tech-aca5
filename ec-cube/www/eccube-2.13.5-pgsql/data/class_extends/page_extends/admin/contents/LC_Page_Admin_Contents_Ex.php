@@ -127,13 +127,20 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
                 list($news['year'],$news['month'],$news['day']) = $this->splitNewsDate($news['cast_news_date']);
                 //以下、追記
                 //新着情報一覧の開始期限と終了期限を分割してlistでそれぞれに代入
-                list($news['start_year'],$news['start_month'],$news['start_day']) = $this->splitNewsDate($news['cast_start_news_date']);
-                if($news['cast_end_news_date'] == 'infinity'){
-                    $news['end_year'] = null;
-                    $news['end_month'] = null;
-                    $news['end_day'] = null;
-                }else{
-                    list($news['end_year'],$news['end_month'],$news['end_day']) = $this->splitNewsDate($news['cast_end_news_date']);
+                if($news['cast_start_news_date'] ===  null) {
+                    $news['start_year'] = "";
+                    $news['start_month'] = "";
+                    $news['start_day'] = "";
+                } else {
+                    list($news['start_year'],$news['start_month'],$news['start_day']) = $this->splitNewsDate($news['cast_start_news_date']);
+                }
+
+                if($news['cast_end_news_date'] ===  null) {   //終了期限が設定されていない場合はプルダウンメニューのデフォルトを空に
+                    $news['end_year'] = "";
+                    $news['end_month'] = "";
+                    $news['end_day'] = "";
+                } else {//終了期限が設定されている場合はその終了期限をプルダウンメニューのデフォルトに
+                    list ($news['end_year'],$news['end_month'],$news['end_day']) = $this->splitNewsDate($news['cast_end_news_date']);
                 }
 
                 //追記終了
@@ -200,38 +207,13 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
      */
     function doRegist($news_id, $sqlval, SC_Helper_News_Ex $objNews)
     {
-
-        //以下、オーバーライド。
-        //インサートの準備
         $sqlval['start_news_date'] = $this->getStartDate($sqlval);
         $sqlval['end_news_date'] = $this->getEndDate($sqlval);
-        $sqlval['end_date_select'] = $this -> End_date_select($sqlval['end_date_select']);
         unset($sqlval['start_year'], $sqlval['start_month'], $sqlval['start_day']);
         unset($sqlval['end_year'], $sqlval['end_month'], $sqlval['end_day']);
         //これらはデータベースのテーブルにないので破棄
-
-        //基底クラスのオーバーライドするメソッドを呼び出し
         parent::doRegist($news_id, $sqlval, $objNews);
 
-    }
-
-    /**
-     * ラジオボタンで指定しないを選択した場合は1，指定するを選択した場合は2を格納する
-     * @param  int $end_date_select
-     * @return int
-     */
-    public function End_date_select($end_date_select)
-    {
-        if (strlen($end_date_select) == 0) {
-            $end_date_select = "";
-        }
-        else
-        {
-            $end_date_select = "1";
-
-        }
-
-        return $end_date_select;
     }
 
 
@@ -246,10 +228,9 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
 
         //以下、オーバーライド。
         //表示開始期限と表示終了期限のプルダウンメニューの初期化
-        $objFormParam->addParam('表示終了期限の設定の有無', 'end_date_select', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        $objFormParam->addParam('表示開始期限(年)', 'start_year', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        $objFormParam->addParam('表示開始期限(月)', 'start_month', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        $objFormParam->addParam('表示開始期限(日)', 'start_day', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示開始期限(年)', 'start_year', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示開始期限(月)', 'start_month', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示開始期限(日)', 'start_day', INT_LEN, 'n', array( 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('表示終了期限(年)', 'end_year', INT_LEN, 'n', array( 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('表示終了期限(月)', 'end_month', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('表示終了期限(日)', 'end_day', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
@@ -264,16 +245,13 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
     function lfCheckError(&$objFormParam)
     {
         $objErr = new SC_CheckError_Ex($objFormParam->getHashArray());
-//        parent::lfCheckError($objFormParam);
         $objErr->arrErr = $objFormParam->checkError();
         //入力情報のエラーチェック
         $objErr->doFunc(array('日付', 'year', 'month', 'day'), array('CHECK_DATE'));
-        $objErr->doFunc(array( 'end_date_select','表示終了期限','end_year', 'end_month', 'end_day'), array('RADIOBUTTON_SELECT')); //ラジオボタンの選択について
         $objErr->doFunc(array('表示開始期限', 'start_year', 'start_month', 'start_day'), array('CHECK_DATE'));
-//        $objErr->doFunc(array('表示終了期限', 'end_year', 'end_month', 'end_day'), array('CHECK_DATE'));
+        $objErr->doFunc(array('表示終了期限','end_year','end_month','end_day'), array('CHECK_DATE'));
         $objErr->doFunc(array( 'start_year', 'start_month', 'start_day', '表示開始期限',
-                                'end_year', 'end_month', 'end_day','表示終了期限','end_date_select'), array('CHECK_DATE_CONTEXT')); //表示開始期限と表示終了期限の前後関係について
-
+                                'end_year', 'end_month', 'end_day','表示終了期限'), array('CHECK_DATE_CONTEXT')); //表示開始期限と表示終了期限の前後関係について
 
         return $objErr->arrErr;
     }
@@ -285,8 +263,12 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
      */
     function getStartDate($arrPost)
     {
-        $startDate = $arrPost['start_year'] .'/'. $arrPost['start_month'] .'/'. $arrPost['start_day'];
+        if (strlen($arrPost['start_year']) == 0 && strlen($arrPost['start_month']) == 0 && strlen($arrPost['start_day']) == 0) {
+            $startDate = null;
+        } else {
 
+            $startDate = $arrPost['start_year'] .'/'. $arrPost['start_month'] .'/'. $arrPost['start_day'];
+        }
         return $startDate;
     }
 
@@ -297,10 +279,10 @@ class LC_Page_Admin_Contents_Ex extends LC_Page_Admin_Contents
      */
     function getEndDate($arrPost)
     {
-        if(strlen($arrPost['end_date_select']) == 0 )
-        {
-            $endDate = 'infinity';//ラジオボタンで「指定しない」にすると期限が無しになる。⇒表示終了期限に'infinity'をインサート
-        }else{
+
+        if (strlen($arrPost['end_year']) == 0 && strlen($arrPost['end_month']) == 0 && strlen($arrPost['end_day']) == 0) {
+            $endDate = null;
+        } else {
             $endDate = $arrPost['end_year'] .'/'. $arrPost['end_month'] .'/'. $arrPost['end_day'];
         }
 
