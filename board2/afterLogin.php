@@ -36,11 +36,7 @@ require_once 'Encode.php';
     ?>
 </table><br>
 <form method="POST" action="insert_process_post.php">
-    <p>
-        投稿者ID:<br />
-        <input type="text" name="user_id" size="25" maxlength="10" />
-    </p><p>
-        本文:<br />
+    <p>本文:<br />
         <input type="text" name="contents" size="100" maxlength="200" />
     </p><p>
         <input type="submit" />
@@ -48,9 +44,5 @@ require_once 'Encode.php';
 </form>
 <input type="button" onclick="php:location.href='update.php'" value="投稿の編集" />
 <input type="button" onclick="php:location.href='delete.php'" value="投稿の削除" />
-<?php
-echo $_SESSION['user_id'];
-echo $_SESSION['name_login'];
-?>
 </body>
 </html>

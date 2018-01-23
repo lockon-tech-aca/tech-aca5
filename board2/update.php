@@ -17,7 +17,8 @@ require_once 'Encode.php';
     <?php
     try{
         $db = getDb();
-        $stt = $db->query('SELECT * FROM post_table ORDER BY id ASC');
+        $_SESSION['user_id'] = $user_id;
+        $stt = $db->query("SELECT * FROM post_table WHERE id = '$user_id' ORDER BY id ASC");
         //結果セットの内容を順に出力
         while($row = $stt->fetch(PDO::FETCH_ASSOC)){
             ?>
@@ -34,7 +35,7 @@ require_once 'Encode.php';
     }
     ?>
 </table>
-<form method="POST" action="update_process_post.php">
+<form method="POST" action="update_process.php">
     <p>
         投稿ID:<br />
         <input type="text" name="id" size="25" maxlength="10" />
@@ -45,5 +46,7 @@ require_once 'Encode.php';
         <input type="submit" />
     </p>
 </form>
+<input type="button" onclick="php:location.href='afterLogin.php'" value="投稿の追加" />
+<input type="button" onclick="php:location.href='delete.php'" value="投稿の削除" />
 </body>
 </html>

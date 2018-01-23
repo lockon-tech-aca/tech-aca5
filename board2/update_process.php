@@ -10,18 +10,9 @@ try {
     $stt->execute();
     $db = NULL;
 
-    $sql = 'update テーブル名 set name =:name where id = :value';
-    $stmt = $pdo -> prepare($sql);
-    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-    $stmt->bindValue(':value', 1, PDO::PARAM_INT);
-    $stmt->execute();
 }catch(PDOException $e){
     die("エラーメッセージ:{$e->getMessege()}");
 }
 //処理後は入力フォームにリダイレクト
 header('Location: http://localhost/tech-aca5/board2/afterLogin.php');
 ?>
-
-
-</body>
-</html>
