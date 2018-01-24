@@ -1,0 +1,134 @@
+2018/01/21 18:33:54 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [INSERT INTO dtb_news(news_id,year_start,month_start,day_start,year_end,month_end,day_end,news_title,news_url,news_comment,link_method,creator_id,news_date,update_date,rank,create_date) SELECT ?,?,?,?,?,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP,?,CURRENT_TIMESTAMP]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: SELECT NEXTVAL('dtb_news_news_id_seq')]
+[Native message: ERROR:  column "year_start" of relation "dtb_news" does not exist
+行 1: INSERT INTO dtb_news(news_id,year_start,month_start,day_star...
+                                   ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[ivuks0mhnsd4kn2r42abj3h804]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(101): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(214): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(101): SC_Query->insert
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(575): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(868): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/21 20:59:28 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [INSERT INTO dtb_news(news_id,news_title,news_url,news_comment,link_method,creator_id,news_date,news_date_start,news_date_end,update_date,rank,create_date) SELECT ?,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP,?,CURRENT_TIMESTAMP]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: SELECT NEXTVAL('dtb_news_news_id_seq')]
+[Native message: ERROR:  column "news_date_start" of relation "dtb_news" does not exist
+行 1: ...url,news_comment,link_method,creator_id,news_date,news_date_...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[4857oem3lpreuubv6kmbigktj6]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(67): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(101): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(218): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(101): SC_Query->insert
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(575): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(868): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/23 17:12:09 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:12:09 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 17:13:36 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:13:36 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 17:14:11 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:14:11 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 17:14:25 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:14:25 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 17:21:04 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:21:04 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 17:24:58 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:24:58 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 17:25:56 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:25:56 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 17:27:46 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:27:46 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 17:28:20 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:28:20 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 17:28:50 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:28:50 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 17:29:30 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:29:30 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 17:30:43 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:30:43 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 17:31:06 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 17:31:06 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 18:37:01 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 18:37:01 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 18:37:02 [/eccube-2.13.5-pgsql/html/preview/index.php] Fatal error(E_USER_ERROR): Smarty error: [in /vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl line 45]: syntax error: unrecognized tag: /if}--!&gt;
+                &lt;!--{/section (Smarty_Compiler.class.php, line 446) on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/preview/index.php(29): LC_Page_Preview_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/preview/LC_Page_Preview_Ex.php(54): LC_Page_Preview->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/preview/LC_Page_Preview.php(66): SC_View->display
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(185): Smarty->display
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1107): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(53): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1262): Smarty->_compile_resource
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1423): Smarty->_compile_source
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1490): Smarty_Compiler->_compile_file
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(312): Smarty_Compiler->_compile_tag
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(446): Smarty_Compiler->_syntax_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(2256): Smarty->_trigger_fatal_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1816): Smarty->trigger_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094): trigger_error
+2018/01/23 18:44:51 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 18:44:51 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 18:44:52 [/eccube-2.13.5-pgsql/html/preview/index.php] Fatal error(E_USER_ERROR): Smarty error: [in /vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl line 46]: syntax error: unrecognized tag: /if}--!&gt;
+                &lt;!--{/section (Smarty_Compiler.class.php, line 446) on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/preview/index.php(29): LC_Page_Preview_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/preview/LC_Page_Preview_Ex.php(54): LC_Page_Preview->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/preview/LC_Page_Preview.php(66): SC_View->display
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(185): Smarty->display
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1107): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(53): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1262): Smarty->_compile_resource
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1423): Smarty->_compile_source
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1490): Smarty_Compiler->_compile_file
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(312): Smarty_Compiler->_compile_tag
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(446): Smarty_Compiler->_syntax_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(2256): Smarty->_trigger_fatal_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1816): Smarty->trigger_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094): trigger_error
+2018/01/23 18:46:23 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 18:46:23 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 18:49:00 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 18:49:00 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 18:51:07 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 18:51:07 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/23 18:52:29 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
+2018/01/23 18:52:29 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1

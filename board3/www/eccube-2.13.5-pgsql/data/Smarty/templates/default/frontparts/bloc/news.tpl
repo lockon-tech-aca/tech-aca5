@@ -27,19 +27,22 @@
             <div class="block_body">
                 <div class="news_contents">
                 <!--{section name=data loop=$arrNews}-->
-                <!--{assign var="date_array" value="-"|explode:$arrNews[data].cast_news_date}-->
-                <dl class="newslist">
-                    <dt><!--{$date_array[0]}-->年<!--{$date_array[1]}-->月<!--{$date_array[2]}-->日</dt>
-                    <dt>
-                        <a
-                            <!--{if $arrNews[data].news_url}--> href="<!--{$arrNews[data].news_url}-->" <!--{if $arrNews[data].link_method eq "2"}--> target="_blank"
+                    <!--{if $arrNews[data].news_date_start<date('Y/m/d H:i:s') && $arrNews[data].news_date_end>date('Y/m/d H:i:s')}-->
+                        <!--{assign var="date_array" value="-"|explode:$arrNews[data].cast_news_date}-->
+                        <dl class="newslist">
+                            <dt><!--{$date_array[0]}-->年<!--{$date_array[1]}-->月<!--{$date_array[2]}-->日</dt>
+                            <dt>
+                                <a
+                                <!--{if $arrNews[data].news_url}--> href="<!--{$arrNews[data].news_url}-->" <!--{if $arrNews[data].link_method eq "2"}--> target="_blank"
                                 <!--{/if}-->
-                            <!--{/if}-->
-                        >
-                            <!--{$arrNews[data].news_title|h|nl2br}--></a>
-                    </dt>
-                    <dd class="mini"><!--{$arrNews[data].news_comment|h|nl2br}--></dd>
-                </dl>
+                                <!--{/if}-->
+                                >
+                                <!--{$arrNews[data].news_title|h|nl2br}--></a>
+                            </dt>
+                            <dt>表示期間　<!--{$arrNews[data].news_date_start|date_format:"%Y/%m/%d"}-->～<!--{$arrNews[data].news_date_end|date_format:"%Y/%m/%d"}--></dt>
+                            <dd class="mini"><!--{$arrNews[data].news_comment|h|nl2br}--></dd>
+                        </dl>
+                    <!--{/if}-->
                 <!--{/section}-->
                 </div>
             </div>

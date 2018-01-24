@@ -183,6 +183,12 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $objFormParam->addParam('日付(年)', 'year', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('日付(月)', 'month', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('日付(日)', 'day', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示開始日(年)', 'year_start', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示開始日(月)', 'month_start', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示開始日(日)', 'day_start', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示終了日(年)', 'year_end', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示終了日(月)', 'month_end', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示終了日(日)', 'day_end', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('タイトル', 'news_title', MTEXT_LEN, 'KVa', array('EXIST_CHECK','MAX_LENGTH_CHECK','SPTAB_CHECK'));
         $objFormParam->addParam('URL', 'news_url', URL_LEN, 'KVa', array('MAX_LENGTH_CHECK'));
         $objFormParam->addParam('本文', 'news_comment', LTEXT_LEN, 'KVa', array('MAX_LENGTH_CHECK'));
@@ -204,6 +210,10 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $sqlval['link_method'] = $this->checkLinkMethod($sqlval['link_method']);
         $sqlval['news_date'] = $this->getRegistDate($sqlval);
         unset($sqlval['year'], $sqlval['month'], $sqlval['day']);
+        $sqlval['news_date_start'] = $this->getStartDate($sqlval);
+        unset($sqlval['year_start'], $sqlval['month_start'], $sqlval['day_start']);
+        $sqlval['news_date_end'] = $this->getEndDate($sqlval);
+        unset($sqlval['year_end'], $sqlval['month_end'], $sqlval['day_end']);
 
         return $objNews->saveNews($sqlval);
     }
@@ -218,6 +228,18 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $registDate = $arrPost['year'] .'/'. $arrPost['month'] .'/'. $arrPost['day'];
 
         return $registDate;
+    }
+    public function getStartDate($arrPost)
+    {
+        $StartDate = $arrPost['year_start'] .'/'. $arrPost['month_start'] .'/'. $arrPost['day_start'];
+
+        return $StartDate;
+    }
+    public function getEndDate($arrPost)
+    {
+        $EndDate = $arrPost['year_end'] .'/'. $arrPost['month_end'] .'/'. $arrPost['day_end'];
+
+        return $EndDate;
     }
 
     /**
