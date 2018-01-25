@@ -174,7 +174,7 @@
                 <td><!--{math equation="$line_max - $db_rank + 1"}--></td>
                 <td><!--{$arrNews[data].cast_news_date|date_format:"%Y/%m/%d"}--></td>
                 <td>
-                    <!--{if $arrNews[data].start_news_date !== null}-->
+                    <!--{if $arrNews[data].cast_start_news_date !== null}-->
                         <!--{$arrNews[data].cast_start_news_date|date_format:"%Y/%m/%d"}-->
                     <!--{else}-->
                         未指定

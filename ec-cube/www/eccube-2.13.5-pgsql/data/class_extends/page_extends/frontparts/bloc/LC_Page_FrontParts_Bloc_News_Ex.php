@@ -65,7 +65,7 @@ class LC_Page_FrontParts_Bloc_News_Ex extends LC_Page_FrontParts_Bloc_News
         $objNews = new SC_Helper_News_Ex();
         $objFormParam = new SC_FormParam_Ex();
         switch ($this->getMode()) {
-            case 'getList_front':
+            case 'getList':
                 $this->lfInitNewsParam($objFormParam);
                 $objFormParam->setParam($_POST);
                 $objFormParam->convParam();

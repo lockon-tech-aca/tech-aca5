@@ -48,12 +48,11 @@ class SC_Helper_News_Ex extends SC_Helper_News
 
         $objQuery =& SC_Query_Ex::getSingletonInstance();
 
-        $col = '*, cast(news_date as date) as cast_news_date';
+        $col = 'news_title, news_comment, news_url, link_method, cast(news_date as date) as cast_news_date';
         $table = 'dtb_news';
-        $where_start_date = "(start_news_date <= CURRENT_TIMESTAMP OR start_news_date is null)";
-        $where_end_date = "(end_news_date > CURRENT_TIMESTAMP - INTERVAL '1 DAY' OR end_news_date is null)";
+        $where_start_date = "(start_news_date is null OR start_news_date <= CURRENT_TIMESTAMP AT TIME ZONE 'JST')";
+        $where_end_date = "(end_news_date is null OR end_news_date > CURRENT_TIMESTAMP AT TIME ZONE 'JST' - INTERVAL '1 DAY')";
         $where_del_flg ='del_flg = 0';
-
 
         $objQuery->setwhere($where_start_date);
         $objQuery->andWhere($where_end_date);
@@ -85,8 +84,9 @@ class SC_Helper_News_Ex extends SC_Helper_News
     public function getList($dispNumber = 0, $pageNumber = 0, $has_deleted = false)
     {
         $objQuery =& SC_Query_Ex::getSingletonInstance();
-        $col = "*, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date,
-              cast(end_news_date as date) as cast_end_news_date";
+        $col = "news_id, news_date, rank, news_title, news_comment, news_url, news_select, link_method, creator_id, 
+              create_date, update_date, del_flg, cast(news_date as date) as cast_news_date,
+              cast(start_news_date as date) as cast_start_news_date, cast(end_news_date as date) as cast_end_news_date";
 
         $where = '';
         if (!$has_deleted) {
@@ -116,8 +116,9 @@ class SC_Helper_News_Ex extends SC_Helper_News
     public static function getNews($news_id, $has_deleted = false)
     {
         $objQuery =& SC_Query_Ex::getSingletonInstance();
-        $col = "*, cast(news_date as date) as cast_news_date, cast(start_news_date as date) as cast_start_news_date, 
-              cast(end_news_date as date) as cast_end_news_date";
+        $col = "news_id, news_date, rank, news_title, news_comment, news_url, news_select, link_method, creator_id, 
+              create_date, update_date, del_flg, cast(news_date as date) as cast_news_date,
+              cast(start_news_date as date) as cast_start_news_date, cast(end_news_date as date) as cast_end_news_date";
         $where = 'news_id = ?';
         if (!$has_deleted) {
             $where .= ' AND del_flg = 0';
