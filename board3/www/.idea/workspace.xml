@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="104e0bed-283e-4eb4-9cb7-559594ed0eba" name="Default" comment="" />
+    <list default="true" id="bdadb2c4-aec7-4c57-8f38-5403ddc0b68b" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +21,58 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="LC_Page_Admin_Contents.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2134">
+              <caret line="117" column="46" lean-forward="true" selection-start-line="117" selection-start-column="46" selection-end-line="117" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SC_Helper_News.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LC_Page_Admin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eccube-2.13.5-pgsql/data/class/pages/admin/LC_Page_Admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-528">
+              <caret line="32" column="6" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eccube-2.13.5-pgsql/data/Smarty/templates/default/frontparts/bloc/news.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="29" column="130" lean-forward="false" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="130" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/eccube-2.13.5-pgsql/data/Smarty/templates/admin/contents/index.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2860">
+              <caret line="163" column="76" lean-forward="true" selection-start-line="163" selection-start-column="76" selection-end-line="163" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -49,8 +101,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="700" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1030" />
   </component>
@@ -85,7 +137,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../.." />
+
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -109,17 +163,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516502615001</updated>
-      <workItem from="1516502616331" duration="35646000" />
+      <workItem from="1516502616331" duration="35515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35646000" />
+    <option name="totallyTimeSpent" value="35515000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22432433" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22432433" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -127,7 +181,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -194,7 +248,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="1631" column="27" lean-forward="false" selection-start-line="1631" selection-start-column="27" selection-end-line="1631" selection-end-column="27" />
-          <folding />
+          <folding>
+            <marker date="1515489000371" expanded="true" signature="38470:38501" ph="..." />
+            <marker date="1515489000371" expanded="true" signature="40712:40767" ph="SELECT state... mtb_zip" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -226,7 +283,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="65" column="42" lean-forward="true" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
-          <folding />
+          <folding>
+            <marker date="1515489003677" expanded="true" signature="3590:3965" ph="SELECT COUNT... dtb_review" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -242,7 +301,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-          <folding />
+          <folding>
+            <marker date="1515489000893" expanded="true" signature="2746:2782" ph="ALTER TABLE ${$tableName}... " />
+            <marker date="1515489000893" expanded="true" signature="13100:13160" ph="SELECT categ... dtb_category" />
+            <marker date="1515489000893" expanded="true" signature="13933:13993" ph="SELECT categ... dtb_category" />
+            <marker date="1515489000893" expanded="true" signature="23150:23527" ph="SELECT T1.ca... dtb_category" />
+            <marker date="1515489000893" expanded="true" signature="44196:44223" ph="DELETE FROM " />
+            <marker date="1515489000893" expanded="true" signature="44271:44336" ph="INSERT INTO dtb_maker_count... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -266,7 +332,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7392">
           <caret line="863" column="20" lean-forward="false" selection-start-line="863" selection-start-column="20" selection-end-line="863" selection-end-column="20" />
-          <folding />
+          <folding>
+            <marker date="1515489000692" expanded="true" signature="15209:15244" ph="INSERT INTO ${$table}... " />
+            <marker date="1515489000692" expanded="true" signature="15237:15244" ph="SELECT ${$st... " />
+            <marker date="1515489000692" expanded="true" signature="17099:17117" ph="UPDATE ${$ta... " />
+            <marker date="1515489000692" expanded="true" signature="21677:21689" ph="DELETE FROM " />
+            <marker date="1515489000692" expanded="true" signature="21770:21833" ph="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -306,7 +378,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6925">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1515489002942" expanded="true" signature="1383:1477" ph="SELECT * FRO... dtb_customer" />
+            <marker date="1515489002942" expanded="true" signature="3700:3783" ph="SELECT * FRO... dtb_customer" />
+            <marker date="1515489002942" expanded="true" signature="5091:5186" ph="SELECT * FRO... dtb_customer" />
+            <marker date="1515489002942" expanded="true" signature="5526:5590" ph="SELECT * FRO... dtb_customer" />
+          </folding>
         </state>
       </provider>
     </entry>

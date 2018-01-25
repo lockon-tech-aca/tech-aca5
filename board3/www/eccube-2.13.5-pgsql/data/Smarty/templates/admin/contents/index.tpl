@@ -48,6 +48,42 @@
                 </td>
             </tr>
             <tr>
+                <th>表示開始日<span class="attention"> *</span></th>
+                <td>
+                    <!--{if $arrErr.year_start || $arrErr.month_start || $arrErr.day_start}--><span class="attention"><!--{$arrErr.year_start}--><!--{$arrErr.month_start}--><!--{$arrErr.day_start}--></span><!--{/if}-->
+                    <select name="year_start" <!--{if $arrErr.year_start || $arrErr.month_start || $arrErr.day_start}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">----</option>
+                    <!--{html_options options=$arrYear selected=$arrForm.year_start.value}-->
+                    </select>年
+                    <select name="month_start" <!--{if $arrErr.year_start || $arrErr.month_start || $arrErr.day_start}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">--</option>
+                    <!--{html_options options=$arrMonth selected=$arrForm.month_start.value}-->
+                    </select>月
+                    <select name="day_start" <!--{if $arrErr.year_start || $arrErr.month_start || $arrErr.day_start}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">--</option>
+                    <!--{html_options options=$arrDay selected=$arrForm.day_start.value}-->
+                    </select>日
+                </td>
+            </tr>
+            <tr>
+                <th>表示終了日<span class="attention"> *</span></th>
+                <td>
+                    <!--{if $arrErr.year_end || $arrErr.month_end || $arrErr.day_end}--><span class="attention"><!--{$arrErr.year_end}--><!--{$arrErr.month_end}--><!--{$arrErr.day_end}--></span><!--{/if}-->
+                    <select name="year_end" <!--{if $arrErr.year_end || $arrErr.month_end || $arrErr.day_end}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">----</option>
+                    <!--{html_options options=$arrYear selected=$arrForm.year_end.value}-->
+                    </select>年
+                    <select name="month_end" <!--{if $arrErr.year_end || $arrErr.month_end || $arrErr.day_end}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">--</option>
+                    <!--{html_options options=$arrMonth selected=$arrForm.month_end.value}-->
+                    </select>月
+                    <select name="day_end" <!--{if $arrErr.year_end || $arrErr.month_end || $arrErr.day_end}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">--</option>
+                    <!--{html_options options=$arrDay selected=$arrForm.day_end.value}-->
+                    </select>日
+                </td>
+            </tr>
+            <tr>
                 <th>タイトル<span class="attention"> *</span></th>
                 <td>
                     <!--{if $arrErr.news_title}--><span class="attention"><!--{$arrErr.news_title}--></span><!--{/if}-->
@@ -101,11 +137,13 @@
         <input type="hidden" name="rank" value="" />
         <table class="list">
             <col width="5%" />
-            <col width="15%" />
-            <col width="45%" />
+            <col width="5%" />
+            <col width="35%" />
             <col width="5%" />
             <col width="5%" />
-            <col width="25%" />
+            <col width="20%" />
+            <col width="5%" />
+            <col width="5%" />
             <tr>
                 <th>順位</th>
                 <th>日付</th>
@@ -113,6 +151,8 @@
                 <th class="edit">編集</th>
                 <th class="delete">削除</th>
                 <th>移動</th>
+                <th>表示開始日</th>
+                <th>表示終了日</th>
             </tr>
             <!--{section name=data loop=$arrNews}-->
             <tr style="background:<!--{if $arrNews[data].news_id != $tpl_news_id}-->#ffffff<!--{else}--><!--{$smarty.const.SELECT_RGB}--><!--{/if}-->;" class="center">
@@ -145,10 +185,13 @@
                     <a href="?" onclick="eccube.fnFormModeSubmit('move','down','news_id','<!--{$arrNews[data].news_id|h}-->'); return false;">下へ</a>
                     <!--{/if}-->
                 </td>
+                <td><!--{$arrNews[data].news_date_start|date_format:"%Y/%m/%d"}--></td>
+                <td><!--{$arrNews[data].news_date_end|date_format:"%Y/%m/%d"}--></td>
             </tr>
             <!--{sectionelse}-->
             <tr class="center">
-                <td colspan="6">現在データはありません。</td>
+                <td colspan="8">現在データはありません。</td>
+
             </tr>
             <!--{/section}-->
         </table>
