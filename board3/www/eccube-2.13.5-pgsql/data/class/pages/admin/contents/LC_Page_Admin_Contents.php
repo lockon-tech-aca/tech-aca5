@@ -47,6 +47,12 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
             'year' => date('Y'),
             'month' => date('n'),
             'day' => date('j'),
+            'year_start' => date('Y'),
+            'month_start' => date('n'),
+            'day_start' => date('j'),
+            'year_end' => date('Y'),
+            'month_end' => date('n'),
+            'day_end' => date('j'),
         );
         $this->tpl_maintitle = 'コンテンツ管理';
         $this->tpl_subtitle = '新着情報管理';
@@ -82,12 +88,15 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $objFormParam->setParam($_POST);
         $objFormParam->convParam();
 
+
+
         $news_id = $objFormParam->getValue('news_id');
 
         //---- 新規登録/編集登録
         switch ($this->getMode()) {
             case 'edit':
                 $this->arrErr = $this->lfCheckError($objFormParam);
+
                 if (!SC_Utils_Ex::isBlank($this->arrErr['news_id'])) {
                     trigger_error('', E_USER_ERROR);
 
@@ -112,6 +121,8 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
             case 'pre_edit':
                 $news = $objNews->getNews($news_id);
                 list($news['year'],$news['month'],$news['day']) = $this->splitNewsDate($news['cast_news_date']);
+                list($news['year_start'],$news['month_start'],$news['day_start']) = $this->splitNewsDate($news['cast_news_date_start']);
+                list($news['year_end'],$news['month_end'],$news['day_end']) = $this->splitNewsDate($news['cast_news_date_end']);
                 $objFormParam->setParam($news);
 
                 // POSTデータを引き継ぐ
@@ -210,10 +221,6 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $sqlval['link_method'] = $this->checkLinkMethod($sqlval['link_method']);
         $sqlval['news_date'] = $this->getRegistDate($sqlval);
         unset($sqlval['year'], $sqlval['month'], $sqlval['day']);
-        $sqlval['news_date_start'] = $this->getStartDate($sqlval);
-        unset($sqlval['year_start'], $sqlval['month_start'], $sqlval['day_start']);
-        $sqlval['news_date_end'] = $this->getEndDate($sqlval);
-        unset($sqlval['year_end'], $sqlval['month_end'], $sqlval['day_end']);
 
         return $objNews->saveNews($sqlval);
     }

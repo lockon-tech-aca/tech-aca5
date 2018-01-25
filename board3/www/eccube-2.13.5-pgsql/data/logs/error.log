@@ -132,3 +132,281 @@ customer_id = 1
 2018/01/23 18:51:07 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
 2018/01/23 18:52:29 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): ページ情報を取得できませんでした。 on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(58)] from 192.168.55.1
 2018/01/23 18:52:29 [/eccube-2.13.5-pgsql/html/preview/index.php] Warning(E_USER_WARNING): メイン部のテンプレートが存在しません。[/vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/.tpl] on [/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_PageLayout.php(65)] from 192.168.55.1
+2018/01/25 01:55:48 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [UPDATE dtb_news SET news_id= ?, year_start= ?, month_start= ?, day_start= ?, year_end= ?, month_end= ?, day_end= ?, news_title= ?, news_url= ?, news_comment= ?, link_method= ?, news_date= ?, news_date_start= ?, news_date_end= ?, update_date= CURRENT_TIMESTAMP WHERE news_id = ?]
+MDB2 Error: no such field
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_295bf04e3fd9fe546628c007957bf9158db93a8a9]
+[Native message: ERROR:  column "year_start" of relation "dtb_news" does not exist
+行 1: UPDATE dtb_news SET news_id= $1, year_start= $2, month_start...
+                                       ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[3cn6hoovtomu2v9pqqaef91oa0]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(73): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(107): LC_Page_Admin_Contents->doRegist
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(224): SC_Helper_News->saveNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(107): SC_Query->update
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(635): SC_Query->query
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(868): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/25 02:16:52 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_USER_ERROR): DB処理でエラーが発生しました。
+SQL: [SELECT *, cast(news_date as date) as cast_news_date cast(news_date_start as date) as cast_news_date_start cast(news_date_end as date) as cast_news_date_end FROM dtb_news WHERE news_id = ? AND del_flg = 0   ]
+MDB2 Error: syntax error
+prepare: [Error message: Unable to create prepared statement handle]
+[Last executed query: DEALLOCATE PREPARE mdb2_statement_pgsql_2c9be29643dac4e0d254575fbf9727e6b5b05b0ff]
+[Native message: ERROR:  syntax error at or near "cast"
+行 1: ...LECT *, cast(news_date as date) as cast_news_date cast(news_...
+                                                           ^]
+ on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095)] from 192.168.55.1
+login_id = admin(0)[1plb7c3qdf2lhhm7r7d5e5eli2]
+/vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(73): LC_Page_Admin_Contents->action
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(119): SC_Helper_News::getNews
+/vagrant/www/eccube-2.13.5-pgsql/data/class/helper/SC_Helper_News.php(48): SC_Query->select
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(176): SC_Query->getAll
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(304): SC_Query->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1024): SC_Query->error
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Query.php(1095): trigger_error
+2018/01/25 03:01:44 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): Smarty error: [in /vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl line 30]: syntax error: unrecognized tag: strtotime(&quot;+1 day&quot;,$arrNews[data].news_date_end) (Smarty_Compiler.class.php, line 446) on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(53): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1262): Smarty->_compile_resource
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1423): Smarty->_compile_source
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1490): Smarty_Compiler->_compile_file
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(312): Smarty_Compiler->_compile_tag
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(446): Smarty_Compiler->_syntax_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(2256): Smarty->_trigger_fatal_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1816): Smarty->trigger_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094): trigger_error
+2018/01/25 03:03:05 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): Smarty error: [in /vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl line 30]: syntax error: unrecognized tag: strtotime(&quot;+1 day&quot;,$arrNews[data].news_date_end) (Smarty_Compiler.class.php, line 446) on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(53): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1262): Smarty->_compile_resource
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1423): Smarty->_compile_source
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1490): Smarty_Compiler->_compile_file
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(312): Smarty_Compiler->_compile_tag
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(446): Smarty_Compiler->_syntax_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(2256): Smarty->_trigger_fatal_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1816): Smarty->trigger_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094): trigger_error
+2018/01/25 03:04:00 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): Smarty error: [in /vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl line 30]: syntax error: unrecognized tag: strtotime($arrNews[data].news_date_end),&quot;+1 day&quot; (Smarty_Compiler.class.php, line 446) on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(53): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1262): Smarty->_compile_resource
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1423): Smarty->_compile_source
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1490): Smarty_Compiler->_compile_file
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(312): Smarty_Compiler->_compile_tag
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(446): Smarty_Compiler->_syntax_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(2256): Smarty->_trigger_fatal_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1816): Smarty->trigger_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094): trigger_error
+2018/01/25 03:09:40 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): Smarty error: [in /vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl line 30]: syntax error: unrecognized tag: date(&quot;Y/m/d H:i:s&quot;, strtotime('+1 day',strtotime($arrNews[data].news_date_end))) (Smarty_Compiler.class.php, line 446) on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(53): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1262): Smarty->_compile_resource
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1423): Smarty->_compile_source
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1490): Smarty_Compiler->_compile_file
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(312): Smarty_Compiler->_compile_tag
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(446): Smarty_Compiler->_syntax_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(2256): Smarty->_trigger_fatal_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1816): Smarty->trigger_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094): trigger_error
+2018/01/25 03:10:27 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): Smarty error: [in /vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl line 30]: syntax error: unrecognized tag: date(&quot;Y/m/d H:i:s&quot;, strtotime('+1 day')) (Smarty_Compiler.class.php, line 446) on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(53): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1262): Smarty->_compile_resource
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1423): Smarty->_compile_source
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1490): Smarty_Compiler->_compile_file
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(312): Smarty_Compiler->_compile_tag
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(446): Smarty_Compiler->_syntax_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(2256): Smarty->_trigger_fatal_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1816): Smarty->trigger_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094): trigger_error
+2018/01/25 03:12:27 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): Smarty error: [in /vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl line 30]: syntax error: unrecognized tag 'echo' (Smarty_Compiler.class.php, line 590) on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(53): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1262): Smarty->_compile_resource
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1423): Smarty->_compile_source
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1490): Smarty_Compiler->_compile_file
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(312): Smarty_Compiler->_compile_tag
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(590): Smarty_Compiler->_syntax_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(2256): Smarty->_trigger_fatal_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1816): Smarty->trigger_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094): trigger_error
+2018/01/25 03:13:30 [/eccube-2.13.5-pgsql/html/index.php] Fatal error(E_USER_ERROR): Smarty error: [in /vagrant/www/eccube-2.13.5-pgsql/html/../data/Smarty/templates/default/frontparts/bloc/news.tpl line 30]: syntax error: unrecognized tag:  (Smarty_Compiler.class.php, line 446) on [/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094)] from 192.168.55.1
+customer_id = 1
+/vagrant/www/eccube-2.13.5-pgsql/html/index.php(28): LC_Page_Index_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/LC_Page_Index_Ex.php(54): LC_Page_Index->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page_Index.php(54): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1264): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%F1^F15^F158E3F4%%site_frame.tpl.php(98): Smarty->_smarty_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1870): include
+/vagrant/www/eccube-2.13.5-pgsql/data/Smarty/templates_c/default/%%58^587^5876E692%%site_main.tpl.php(45): smarty_core_smarty_include_php
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/internals/core.smarty_include_php.php(40): Smarty->_include
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1924): include
+/vagrant/www/eccube-2.13.5-pgsql/html/frontparts/bloc/news.php(29): LC_Page_FrontParts_Bloc_News_Ex->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/frontparts/bloc/LC_Page_FrontParts_Bloc_News_Ex.php(54): LC_Page_FrontParts_Bloc_News->process
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/frontparts/bloc/LC_Page_FrontParts_Bloc_News.php(53): LC_Page->sendResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(156): SC_Display->prepare
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_Display.php(80): SC_View->getResponse
+/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_View.php(105): Smarty->fetch
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1262): Smarty->_compile_resource
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1423): Smarty->_compile_source
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1490): Smarty_Compiler->_compile_file
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(312): Smarty_Compiler->_compile_tag
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(446): Smarty_Compiler->_syntax_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(2256): Smarty->_trigger_fatal_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1816): Smarty->trigger_error
+/vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094): trigger_error
+2018/01/25 17:20:50 [/tech-aca5/board3/www/eccube-2.13.5-pgsql/html/admin/home.php] Warning(E_USER_WARNING): ホスト名不一致を検出。リダイレクト実行。要求値='localhost' 設定値='192.168.55.10' リダイレクト先='http://192.168.55.10/tech-aca5/board3/www/eccube-2.13.5-pgsql/html/admin/'  on [C:\xampp\htdocs\tech-aca5\board3\www\eccube-2.13.5-pgsql\data\class\SC_Initial.php(542)] from ::1
+2018/01/25 17:20:50 [/tech-aca5/board3/www/eccube-2.13.5-pgsql/html/admin/home.php] Fatal error(E_ERROR): Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\tech-aca5\board3\www\eccube-2.13.5-pgsql\data\class\SC_Response.php:133
+Stack trace:
+#0 C:\xampp\htdocs\tech-aca5\board3\www\eccube-2.13.5-pgsql\data\class\SC_Initial.php(545): SC_Response::sendRedirect('http://192.168....')
+#1 C:\xampp\htdocs\tech-aca5\board3\www\eccube-2.13.5-pgsql\data\class\SC_Initial.php(60): SC_Initial->normalizeHostname()
+#2 C:\xampp\htdocs\tech-aca5\board3\www\eccube-2.13.5-pgsql\data\app_initial.php(50): SC_Initial->init()
+#3 C:\xampp\htdocs\tech-aca5\board3\www\eccube-2.13.5-pgsql\data\require_base.php(31): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\tech-aca5\board3\www\eccube-2.13.5-pgsql\html\admin\require.php(32): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\tech-aca5\board3\www\eccube-2.13.5-pgsql\html\admin\home.php(23): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown on [C:\xampp\htdocs\tech-aca5\board3\www\eccube-2.13.5-pgsql\data\class\SC_Response.php(133)] from ::1
+login_id = ()[]
+2018/01/25 17:20:50 [/tech-aca5/board3/www/eccube-2.13.5-pgsql/html/admin/home.php] Warning(E_WARNING): Declaration of LC_Page_Error::doValidToken() should be compatible with LC_Page::doValidToken($is_admin = false) on [C:\xampp\htdocs\tech-aca5\board3\www\eccube-2.13.5-pgsql\data\class\pages\error\LC_Page_Error.php(33)] from ::1
+2018/01/25 18:26:08 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_PARSE): syntax error, unexpected ')' on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_FormParam.php(264)] from 192.168.55.1
+login_id = admin(0)[f9p8vv4d0bp1qo9939vjo9kv67]
+2018/01/25 18:26:12 [/eccube-2.13.5-pgsql/html/admin/index.php] Fatal error(E_PARSE): syntax error, unexpected ')' on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_FormParam.php(264)] from 192.168.55.1
+login_id = admin(0)[f9p8vv4d0bp1qo9939vjo9kv67]
+2018/01/25 18:26:19 [/eccube-2.13.5-pgsql/html/admin/index.php] Fatal error(E_PARSE): syntax error, unexpected ')' on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_FormParam.php(264)] from 192.168.55.1
+login_id = admin(0)[f9p8vv4d0bp1qo9939vjo9kv67]
+2018/01/25 18:26:25 [/eccube-2.13.5-pgsql/html/admin/index.php] Fatal error(E_PARSE): syntax error, unexpected ')' on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_FormParam.php(264)] from 192.168.55.1
+login_id = admin(0)[f9p8vv4d0bp1qo9939vjo9kv67]
+2018/01/25 18:26:32 [/eccube-2.13.5-pgsql/html/admin/index.php] Fatal error(E_PARSE): syntax error, unexpected ')' on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_FormParam.php(264)] from 192.168.55.1
+login_id = admin(0)[f9p8vv4d0bp1qo9939vjo9kv67]
+2018/01/25 18:27:22 [/eccube-2.13.5-pgsql/html/admin/index.php] Fatal error(E_PARSE): syntax error, unexpected ')' on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_FormParam.php(264)] from 192.168.55.1
+login_id = admin(0)[f9p8vv4d0bp1qo9939vjo9kv67]
+2018/01/25 18:27:26 [/eccube-2.13.5-pgsql/html/admin/index.php] Fatal error(E_PARSE): syntax error, unexpected ')' on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_FormParam.php(264)] from 192.168.55.1
+login_id = admin(0)[f9p8vv4d0bp1qo9939vjo9kv67]
+2018/01/25 18:28:35 [/eccube-2.13.5-pgsql/html/admin/index.php] Fatal error(E_PARSE): syntax error, unexpected ')' on [/vagrant/www/eccube-2.13.5-pgsql/data/class/SC_FormParam.php(264)] from 192.168.55.1
+login_id = admin(0)[f9p8vv4d0bp1qo9939vjo9kv67]
+2018/01/25 19:05:20 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_PARSE): syntax error, unexpected $end on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(291)] from 192.168.55.1
+login_id = admin(0)[2gm2cfc7gp0kg4gq0o2sjj2c73]
+2018/01/25 19:05:33 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_PARSE): syntax error, unexpected $end on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(291)] from 192.168.55.1
+login_id = admin(0)[h0ttechhebf6jd4ellhf6pm246]
+2018/01/25 19:06:05 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_PARSE): syntax error, unexpected $end on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(289)] from 192.168.55.1
+login_id = admin(0)[h0ttechhebf6jd4ellhf6pm246]
+2018/01/25 19:06:11 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_PARSE): syntax error, unexpected $end on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(289)] from 192.168.55.1
+login_id = admin(0)[h0ttechhebf6jd4ellhf6pm246]
+2018/01/25 19:06:48 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_PARSE): syntax error, unexpected $end on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(289)] from 192.168.55.1
+login_id = admin(0)[h0ttechhebf6jd4ellhf6pm246]
+2018/01/25 19:09:12 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_PARSE): syntax error, unexpected ')' on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(99)] from 192.168.55.1
+login_id = admin(0)[h0ttechhebf6jd4ellhf6pm246]
+2018/01/25 19:09:18 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_PARSE): syntax error, unexpected ')' on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(99)] from 192.168.55.1
+login_id = admin(0)[h0ttechhebf6jd4ellhf6pm246]
