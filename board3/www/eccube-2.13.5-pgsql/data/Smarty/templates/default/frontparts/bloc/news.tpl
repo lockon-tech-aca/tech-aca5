@@ -27,7 +27,7 @@
             <div class="block_body">
                 <div class="news_contents">
                 <!--{section name=data loop=$arrNews}-->
-                    <!--{if $arrNews[data].news_date_start<date('Y/m/d H:i:s') && $arrNews[data].news_date_end>date('Y/m/d H:i:s')}-->
+                    <!--{if $arrNews[data].news_date_start<date('Y/m/d H:i:s') && strtotime($arrNews[data].news_date_end, '+1 day')>date('Y/m/d H:i:s')}-->
                         <!--{assign var="date_array" value="-"|explode:$arrNews[data].cast_news_date}-->
                         <dl class="newslist">
                             <dt><!--{$date_array[0]}-->年<!--{$date_array[1]}-->月<!--{$date_array[2]}-->日</dt>

@@ -28,6 +28,7 @@
         <input type="hidden" name="mode" value="" />
         <input type="hidden" name="news_id" value="<!--{$arrForm.news_id.value|default:$tpl_news_id|h}-->" />
         <!--{* ▼登録テーブルここから *}-->
+        <!--{if $arrErr.news_disp}--><span class="attention"><!--{$arrErr.news_disp}--></span><!--{/if}-->
         <table>
             <tr>
                 <th>日付<span class="attention"> *</span></th>

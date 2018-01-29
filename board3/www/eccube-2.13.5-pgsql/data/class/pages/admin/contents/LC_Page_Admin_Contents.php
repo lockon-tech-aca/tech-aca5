@@ -95,6 +95,18 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
             case 'edit':
                 $this->arrErr = $this->lfCheckError($objFormParam);
 
+                // POST値の引き継ぎ
+                $arrParam = $objFormParam->getHashArray();
+                $arrParam['news_date_start'] = $this->getStartDate($arrParam);
+                unset($arrParam['year_start'], $arrParam['month_start'], $arrParam['day_start']);
+                $arrParam['news_date_end'] = $this->getEndDate($arrParam);
+                unset($arrParam['year_end'], $arrParam['month_end'], $arrParam['day_end']);
+                $news_date_start = new DateTime($arrParam['news_date_start']);
+                $news_date_end = new DateTime($arrParam['news_date_end']);
+                if ($news_date_start > $news_date_end){
+                    $this->arrErr['news_disp'] = '※ 表示開始日は表示終了日以前に設定してください。<br />';
+                }
+
                 if (!SC_Utils_Ex::isBlank($this->arrErr['news_id'])) {
                     trigger_error('', E_USER_ERROR);
 
@@ -102,8 +114,6 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
                 }
 
                 if (count($this->arrErr) <= 0) {
-                    // POST値の引き継ぎ
-                    $arrParam = $objFormParam->getHashArray();
                     // 登録実行
                     $res_news_id = $this->doRegist($news_id, $arrParam, $objNews);
                     if ($res_news_id !== FALSE) {

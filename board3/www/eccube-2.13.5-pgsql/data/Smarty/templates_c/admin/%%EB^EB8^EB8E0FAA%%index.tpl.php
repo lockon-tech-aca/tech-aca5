@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.27, created on 2018-01-25 21:24:57
+<?php /* Smarty version 2.6.27, created on 2018-01-25 22:00:44
          compiled from contents/index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'contents/index.tpl', 27, false),array('modifier', 'default', 'contents/index.tpl', 29, false),array('modifier', 'h', 'contents/index.tpl', 29, false),array('modifier', 'date_format', 'contents/index.tpl', 161, false),array('modifier', 'nl2br', 'contents/index.tpl', 163, false),array('function', 'html_options', 'contents/index.tpl', 38, false),array('function', 'math', 'contents/index.tpl', 160, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_escape', 'contents/index.tpl', 27, false),array('modifier', 'default', 'contents/index.tpl', 29, false),array('modifier', 'h', 'contents/index.tpl', 29, false),array('modifier', 'date_format', 'contents/index.tpl', 162, false),array('modifier', 'nl2br', 'contents/index.tpl', 164, false),array('function', 'html_options', 'contents/index.tpl', 39, false),array('function', 'math', 'contents/index.tpl', 161, false),)), $this); ?>
 
 <div id="admin-contents" class="contents-main">
     <form name="form1" id="form1" method="post" action="?">
@@ -11,7 +11,9 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'script_esca
         <input type="hidden" name="mode" value="" />
         <input type="hidden" name="news_id" value="<?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['arrForm']['news_id']['value'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))) ? $this->_run_mod_handler('default', true, $_tmp, ((is_array($_tmp=$this->_tpl_vars['tpl_news_id'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp))) : smarty_modifier_default($_tmp, ((is_array($_tmp=$this->_tpl_vars['tpl_news_id'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)))))) ? $this->_run_mod_handler('h', true, $_tmp) : smarty_modifier_h($_tmp)); ?>
 " />
-                <table>
+                <?php if (((is_array($_tmp=$this->_tpl_vars['arrErr']['news_disp'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp))): ?><span class="attention"><?php echo ((is_array($_tmp=$this->_tpl_vars['arrErr']['news_disp'])) ? $this->_run_mod_handler('script_escape', true, $_tmp) : smarty_modifier_script_escape($_tmp)); ?>
+</span><?php endif; ?>
+        <table>
             <tr>
                 <th>日付<span class="attention"> *</span></th>
                 <td>

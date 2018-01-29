@@ -40,7 +40,7 @@ class SC_Helper_News
     public static function getNews($news_id, $has_deleted = false)
     {
         $objQuery =& SC_Query_Ex::getSingletonInstance();
-        $col = '*, cast(news_date as date) as cast_news_date';
+        $col = '*, cast(news_date as date) as cast_news_date, cast(news_date_start as date) as cast_news_date_start, cast(news_date_end as date) as cast_news_date_end';
         $where = 'news_id = ?';
         if (!$has_deleted) {
             $where .= ' AND del_flg = 0';
