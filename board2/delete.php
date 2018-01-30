@@ -1,6 +1,7 @@
 <?php
 require_once 'DbManager.php';
 require_once 'Encode.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +10,9 @@ require_once 'Encode.php';
     <title>掲示板2</title>
 </head>
 <body>
-投稿一覧
+<h1>削除ページ</h1>
+<h3>投稿一覧</h3>
+あなたの投稿者idは<?php echo $_SESSION['user_id']; ?>です
 <table border="1">
     <tr>
         <th>投稿id</th><th>投稿者id</th><th>投稿内容</th>
@@ -33,13 +36,14 @@ require_once 'Encode.php';
         die("エラーメッセージ : {$e->getMessege()}");
     }
     ?>
-</table>
+</table><br>
+<h4>自分の投稿のみ削除することができます</h4>
 <form method="POST" action="delete_process.php">
     <p>
         投稿ID:<br />
         <input type="text" name="id" size="25" maxlength="10" />
     </p<p>
-        <input type="submit" />
+        <input type="submit" value="削除" />
     </p>
 </form>
 </body>

@@ -8,6 +8,9 @@ require_once 'Encode.php';
     <title>掲示板2</title>
 </head>
 <body>
+<h1>マイページ</h1>
+<h3>投稿一覧</h3>
+あなたの投稿者idは<?php echo $_SESSION['user_id']; ?>です
 <table border="1">
     <tr>
         <th>投稿id</th><th>投稿者id</th><th>投稿内容</th>
@@ -39,7 +42,7 @@ require_once 'Encode.php';
     <p>本文:<br />
         <input type="text" name="contents" size="100" maxlength="200" />
     </p><p>
-        <input type="submit"  />
+        <input type="submit" value="投稿" />
     </p>
 </form>
 <input type="button" onclick="php:location.href='update.php'" value="投稿の編集" />

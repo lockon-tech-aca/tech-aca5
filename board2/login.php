@@ -17,7 +17,7 @@ try{
     if($user_id){
         header( "location: afterLogin.php" );
     }else{
-        header( "location: false.php" );
+        header( "location: login_false.php" );
     }
 }catch(PDOException $e){
     die();

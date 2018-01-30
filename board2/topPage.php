@@ -9,21 +9,21 @@ require_once 'Encode.php';
     <title>掲示板2</title>
 </head>
 <body>
-新規登録
+<h3>新規登録</h3>
 <form action="insert_process_signUp.php" method="post">
     username:<input type="text" name="name_signUp"><br />
     password:<input type="text" name="password_signUp"><br />
     <input type="submit" name="register" value="登録">
 </form><br />
 
-ログイン
+<h3>ログイン</h3>
 <form action="login.php" method="post">
     username:<input type="text" name="name_login"><br />
     password:<input type="text" name="password_login"><br />
     <input type="submit" name="login" value="ログイン">
 </form><br>
 
-投稿一覧
+<h3>投稿一覧</h3>
 <table border="1">
     <tr>
         <th>投稿id</th><th>投稿者id</th><th>投稿内容</th>
