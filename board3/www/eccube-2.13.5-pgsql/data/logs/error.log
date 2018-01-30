@@ -613,3 +613,23 @@ customer_id =
 /vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty_Compiler.class.php(2256): Smarty->_trigger_fatal_error
 /vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1816): Smarty->trigger_error
 /vagrant/www/eccube-2.13.5-pgsql/data/module/Smarty/libs/Smarty.class.php(1094): trigger_error
+2018/01/30 18:04:17 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_PARSE): syntax error, unexpected T_STRING, expecting T_FUNCTION on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(277)] from 192.168.55.1
+login_id = admin(0)[8cijkl57uklg8od7sn1084f9g0]
+2018/01/30 18:52:15 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_ERROR): Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (2008/7/) at position 4 (/): Unexpected character' in /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php:107
+Stack trace:
+#0 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(107): DateTime->__construct('2008/7/')
+#1 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(73): LC_Page_Admin_Contents->action()
+#2 /vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process()
+#3 /vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process()
+#4 {main}
+  thrown on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(107)] from 192.168.55.1
+login_id = admin(0)[785d0danioghcgtonitk1i9402]
+2018/01/30 18:54:48 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_ERROR): Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (2014//5) at position 4 (/): Unexpected character' in /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php:106
+Stack trace:
+#0 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(106): DateTime->__construct('2014//5')
+#1 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(73): LC_Page_Admin_Contents->action()
+#2 /vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process()
+#3 /vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process()
+#4 {main}
+  thrown on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(106)] from 192.168.55.1
+login_id = admin(0)[785d0danioghcgtonitk1i9402]

@@ -106,7 +106,7 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
                     $news_date_start = new DateTime($arrParam['news_date_start']);
                     $news_date_end = new DateTime($arrParam['news_date_end']);
                     if ($news_date_start > $news_date_end) {
-                        $this->arrErr['news_disp'] = '※ 表示開始日は表示終了日以前に設定してください。<br />';
+                        $this->arrErr['news_disp'] = '※ 表示開始日と表示終了日の整合性が取れないです。<br />';
                     }
                 }
 
@@ -191,6 +191,8 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $objErr = new SC_CheckError_Ex($objFormParam->getHashArray());
         $objErr->arrErr = $objFormParam->checkError();
         $objErr->doFunc(array('日付', 'year', 'month', 'day'), array('CHECK_DATE'));
+        $objErr->doFunc(array('表示開始日', 'year_start', 'month_start', 'day_start'), array('CHECK_DATE'));
+        $objErr->doFunc(array('表示終了日', 'year_end', 'month_end', 'day_end'), array('CHECK_DATE'));
 
         return $objErr->arrErr;
     }
@@ -252,10 +254,8 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
     {
         if(!is_numeric($arrPost['year_start']) && !is_numeric($arrPost['month_start']) && !is_numeric($arrPost['day_start'])) {
             $StartDate = null;
-        }elseif(is_numeric($arrPost['year_start']) && is_numeric($arrPost['month_start']) && is_numeric($arrPost['day_start'])){
-            $StartDate = $arrPost['year_start'] . '/' . $arrPost['month_start'] . '/' . $arrPost['day_start'];
         }else{
-            $this->arrErr['news_start'] = '※ すべての項目を埋めてください。<br />';
+            $StartDate = $arrPost['year_start'] . '/' . $arrPost['month_start'] . '/' . $arrPost['day_start'];
         }
 
         return $StartDate;
@@ -263,12 +263,10 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
 
     public function getEndDate($arrPost)
     {
-        if($arrPost['year_end']=='' && $arrPost['month_end']=='' && $arrPost['day_end']==''){
+        if(!is_numeric($arrPost['year_end']) && !is_numeric($arrPost['month_end']) && !is_numeric($arrPost['day_end'])){
             $EndDate = null;
         }elseif(is_numeric($arrPost['year_end']) && is_numeric($arrPost['month_end']) && is_numeric($arrPost['day_end'])){
             $EndDate = $arrPost['year_end'] .'/'. $arrPost['month_end'] .'/'. $arrPost['day_end'];
-        }else{
-            $this->arrErr['news_end'] = '※ すべての項目を埋めてください。<br />';
         }
 
         return $EndDate;
