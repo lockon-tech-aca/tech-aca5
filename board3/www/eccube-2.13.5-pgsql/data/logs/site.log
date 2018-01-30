@@ -38,3 +38,7 @@
 customer_id = 
 (): LC_Page->__destruct
 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(195): GC_Utils::gfPrintLog
+2018/01/30 10:50:42 [/eccube-2.13.5-pgsql/html/index.php] PAGE_DISPLAY_TIME_LOG [2.39sec] from 192.168.55.1
+customer_id = 
+(): LC_Page->__destruct
+/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/LC_Page.php(195): GC_Utils::gfPrintLog

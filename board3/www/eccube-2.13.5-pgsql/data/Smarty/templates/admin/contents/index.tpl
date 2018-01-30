@@ -49,9 +49,9 @@
                 </td>
             </tr>
             <tr>
-                <th>表示開始日<span class="attention"> *</span></th>
+                <th>表示開始日</th>
                 <td>
-                    <!--{if $arrErr.year_start || $arrErr.month_start || $arrErr.day_start}--><span class="attention"><!--{$arrErr.year_start}--><!--{$arrErr.month_start}--><!--{$arrErr.day_start}--></span><!--{/if}-->
+                    <!--{if $arrErr.year_start || $arrErr.month_start || $arrErr.day_start || $arrErr.news_start}--><span class="attention"><!--{$arrErr.news_start}--><!--{$arrErr.year_start}--><!--{$arrErr.month_start}--><!--{$arrErr.day_start}--></span><!--{/if}-->
                     <select name="year_start" <!--{if $arrErr.year_start || $arrErr.month_start || $arrErr.day_start}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
                     <option value="" selected="selected">----</option>
                     <!--{html_options options=$arrYear selected=$arrForm.year_start.value}-->
@@ -67,9 +67,9 @@
                 </td>
             </tr>
             <tr>
-                <th>表示終了日<span class="attention"> *</span></th>
+                <th>表示終了日</th>
                 <td>
-                    <!--{if $arrErr.year_end || $arrErr.month_end || $arrErr.day_end}--><span class="attention"><!--{$arrErr.year_end}--><!--{$arrErr.month_end}--><!--{$arrErr.day_end}--></span><!--{/if}-->
+                    <!--{if $arrErr.news_end ||$arrErr.year_end || $arrErr.month_end || $arrErr.day_end}--><span class="attention"><!--{$arrErr.news_end}--><!--{$arrErr.year_end}--><!--{$arrErr.month_end}--><!--{$arrErr.day_end}--></span><!--{/if}-->
                     <select name="year_end" <!--{if $arrErr.year_end || $arrErr.month_end || $arrErr.day_end}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
                     <option value="" selected="selected">----</option>
                     <!--{html_options options=$arrYear selected=$arrForm.year_end.value}-->

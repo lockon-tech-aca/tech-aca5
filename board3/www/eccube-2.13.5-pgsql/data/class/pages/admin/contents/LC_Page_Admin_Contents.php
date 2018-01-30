@@ -97,14 +97,17 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
 
                 // POST値の引き継ぎ
                 $arrParam = $objFormParam->getHashArray();
+
                 $arrParam['news_date_start'] = $this->getStartDate($arrParam);
                 unset($arrParam['year_start'], $arrParam['month_start'], $arrParam['day_start']);
                 $arrParam['news_date_end'] = $this->getEndDate($arrParam);
                 unset($arrParam['year_end'], $arrParam['month_end'], $arrParam['day_end']);
-                $news_date_start = new DateTime($arrParam['news_date_start']);
-                $news_date_end = new DateTime($arrParam['news_date_end']);
-                if ($news_date_start > $news_date_end){
-                    $this->arrErr['news_disp'] = '※ 表示開始日は表示終了日以前に設定してください。<br />';
+                if(isset($arrParam['news_date_start']) && isset($arrParam['news_date_end'])) {
+                    $news_date_start = new DateTime($arrParam['news_date_start']);
+                    $news_date_end = new DateTime($arrParam['news_date_end']);
+                    if ($news_date_start > $news_date_end) {
+                        $this->arrErr['news_disp'] = '※ 表示開始日は表示終了日以前に設定してください。<br />';
+                    }
                 }
 
                 if (!SC_Utils_Ex::isBlank($this->arrErr['news_id'])) {
@@ -202,12 +205,12 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
         $objFormParam->addParam('日付(年)', 'year', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('日付(月)', 'month', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('日付(日)', 'day', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        $objFormParam->addParam('表示開始日(年)', 'year_start', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        $objFormParam->addParam('表示開始日(月)', 'month_start', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        $objFormParam->addParam('表示開始日(日)', 'day_start', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        $objFormParam->addParam('表示終了日(年)', 'year_end', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        $objFormParam->addParam('表示終了日(月)', 'month_end', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
-        $objFormParam->addParam('表示終了日(日)', 'day_end', INT_LEN, 'n', array('EXIST_CHECK', 'NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示開始日(年)', 'year_start', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示開始日(月)', 'month_start', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示開始日(日)', 'day_start', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示終了日(年)', 'year_end', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示終了日(月)', 'month_end', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
+        $objFormParam->addParam('表示終了日(日)', 'day_end', INT_LEN, 'n', array('NUM_CHECK', 'MAX_LENGTH_CHECK'));
         $objFormParam->addParam('タイトル', 'news_title', MTEXT_LEN, 'KVa', array('EXIST_CHECK','MAX_LENGTH_CHECK','SPTAB_CHECK'));
         $objFormParam->addParam('URL', 'news_url', URL_LEN, 'KVa', array('MAX_LENGTH_CHECK'));
         $objFormParam->addParam('本文', 'news_comment', LTEXT_LEN, 'KVa', array('MAX_LENGTH_CHECK'));
@@ -247,13 +250,26 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
 
     public function getStartDate($arrPost)
     {
-        $StartDate = $arrPost['year_start'] .'/'. $arrPost['month_start'] .'/'. $arrPost['day_start'];
+        if(!is_numeric($arrPost['year_start']) && !is_numeric($arrPost['month_start']) && !is_numeric($arrPost['day_start'])) {
+            $StartDate = null;
+        }elseif(is_numeric($arrPost['year_start']) && is_numeric($arrPost['month_start']) && is_numeric($arrPost['day_start'])){
+            $StartDate = $arrPost['year_start'] . '/' . $arrPost['month_start'] . '/' . $arrPost['day_start'];
+        }else{
+            $this->arrErr['news_start'] = '※ すべての項目を埋めてください。<br />';
+        }
 
         return $StartDate;
     }
+
     public function getEndDate($arrPost)
     {
-        $EndDate = $arrPost['year_end'] .'/'. $arrPost['month_end'] .'/'. $arrPost['day_end'];
+        if($arrPost['year_end']=='' && $arrPost['month_end']=='' && $arrPost['day_end']==''){
+            $EndDate = null;
+        }elseif(is_numeric($arrPost['year_end']) && is_numeric($arrPost['month_end']) && is_numeric($arrPost['day_end'])){
+            $EndDate = $arrPost['year_end'] .'/'. $arrPost['month_end'] .'/'. $arrPost['day_end'];
+        }else{
+            $this->arrErr['news_end'] = '※ すべての項目を埋めてください。<br />';
+        }
 
         return $EndDate;
     }
