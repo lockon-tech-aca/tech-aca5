@@ -17,8 +17,7 @@ require_once 'Encode.php';
     <?php
     try{
         $db = getDb();
-        $_SESSION['user_id'] = $user_id;
-        $stt = $db->query("SELECT * FROM post_table WHERE id = '$user_id' ORDER BY id ASC");
+        $stt = $db->query("SELECT * FROM post_table ORDER BY id ASC");
         //結果セットの内容を順に出力
         while($row = $stt->fetch(PDO::FETCH_ASSOC)){
             ?>

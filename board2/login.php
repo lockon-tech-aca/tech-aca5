@@ -11,12 +11,8 @@ $password=$_POST['password_login'];
 try{
     $db=getDb();
     $stmt = $db->query("SELECT id FROM member_table WHERE name = '$name' AND password = '$password'");
-    $user_id = $stmt->fetch(PDO::FETCH_ASSOC);
+    $user_id = $stmt->fetchColumn();
     $_SESSION["user_id"] = $user_id;
-
-    //var_dump($user_id);
-    //exit;
-
 
     if($user_id){
         header( "location: afterLogin.php" );

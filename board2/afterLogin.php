@@ -39,7 +39,7 @@ require_once 'Encode.php';
     <p>本文:<br />
         <input type="text" name="contents" size="100" maxlength="200" />
     </p><p>
-        <input type="submit" />
+        <input type="submit"  />
     </p>
 </form>
 <input type="button" onclick="php:location.href='update.php'" value="投稿の編集" />

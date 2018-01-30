@@ -4,9 +4,10 @@ session_start();
 
 try {
     $db = getDb();
-    $stt = $db->prepare('update post_table set id =:id where contents = :contents');
-    $stt->bindValue(':id', $_POST['id']);
+    $stt = $db->prepare('update post_table set contents = :contents, user_id = :user_id where id =:id');
     $stt->bindValue(':contents', $_POST['contents']);
+    $stt->bindValue(':user_id', $_SESSION['user_id']);
+    $stt->bindValue(':id', $_POST['id']);
     $stt->execute();
     $db = NULL;
 

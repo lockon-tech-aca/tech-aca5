@@ -34,7 +34,7 @@ require_once 'Encode.php';
     }
     ?>
 </table>
-<form method="POST" action="delete_process_post.php">
+<form method="POST" action="delete_process.php">
     <p>
         投稿ID:<br />
         <input type="text" name="id" size="25" maxlength="10" />
