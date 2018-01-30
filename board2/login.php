@@ -14,6 +14,10 @@ try{
     $user_id = $stmt->fetch(PDO::FETCH_ASSOC);
     $_SESSION["user_id"] = $user_id;
 
+    //var_dump($user_id);
+    //exit;
+
+
     if($user_id){
         header( "location: afterLogin.php" );
     }else{
