@@ -53,7 +53,7 @@ class SC_CheckError_Ex extends SC_CheckError
             }
         }
 
-        for ($j = 4; $j <= 7;$j++) {
+        for ($j = 4; $j <= 6;$j++) {
             if (isset($this->arrErr[$value[$j]] )) {
                 return;
             }
@@ -66,16 +66,14 @@ class SC_CheckError_Ex extends SC_CheckError
 
                 if($start_date > $arrInput_end[$key]) { //表示開始期限と表示終了期限を比べる
                     $this->arrErr[$value[0]] =
-                        "※ {$disp_name_start}は{$disp_name_end}よりも前の時間で入力してください。<br />";
+                        "※ {$disp_name_start}と{$disp_name_end}の入力が正しくありません。(表示開始期限が表示終了期限以前になるように設定してください。)<br />";
                     $this->arrErr[$value[4]] =
-                        "※ {$disp_name_start}は{$disp_name_end}よりも前の時間で入力してください。<br />";
+                        "※ {$disp_name_start}と{$disp_name_end}の入力が正しくありません。(表示開始期限が表示終了期限以前になるように設定してください。)<br />";
 
                 } else if($start_date === $arrInput_end[$key]) {  //年⇒月⇒日の順で照らし合わせ、年が同じなら月へ、月が同じなら日へ、日が同じならOK!!
                     continue;
-
                 } else {
                     break;
-
                 }
             }
         }else{
