@@ -95,6 +95,7 @@ class LC_Page_FrontParts_Bloc_News extends LC_Page_FrontParts_Bloc_Ex
                 break;
             default:
                 $this->arrNews = $objNews->getList();
+             
                 $this->newsCount = $objNews->getCount();
                 break;
         }
@@ -191,4 +192,7 @@ class LC_Page_FrontParts_Bloc_News extends LC_Page_FrontParts_Bloc_Ex
 
         return SC_Utils_Ex::jsonEncode(array('error' => $messages));
     }
+
+  
+       
 }

@@ -1,1 +1,0 @@
-kazutaka@saryoukazutakanoMacBook-Pro.local.53806

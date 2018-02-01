@@ -26,37 +26,36 @@
             <h2><img src="<!--{$TPL_URLPATH}-->img/title/tit_bloc_news.png" alt="新着情報" /><span class="rss"><a href="<!--{$smarty.const.ROOT_URLPATH}-->rss/<!--{$smarty.const.DIR_INDEX_PATH}-->" target="_blank"><img src="<!--{$TPL_URLPATH}-->img/button/btn_rss.jpg" alt="RSS" /></a></span></h2>
             <div class="block_body">
                 <div class="news_contents">
+		
                     <!--{section name=data loop=$arrNews}-->
 		    
                     <!--{assign var="date_array" value="-"|explode:$arrNews[data].cast_news_date}-->
 		    <!--{*追加箇所*}-->
+		    <!--{assign var="start_date_array" value="-"|explode:$arrNews[data].cast_start_news_date}-->
 		    <!--{assign var="end_date_array" value="-"|explode:$arrNews[data].cast_end_news_date}-->
 		    <!--{*終わり*}-->
                     <dl class="newslist">
-			
+
 			<!--{*追加箇所*}-->
-			<!--{if $arrNews[data].indefinite_period_flag eq "2"}-->
-			<dt>表示開始期限<br><!--{$date_array[0]}-->年<!--{$date_array[1]}-->月<!--{$date_array[2]}-->日</dt>
-			<dt>表示終了期限<br>無期限</dt>
-			<dt>
-                            <a
-				<!--{if $arrNews[data].news_url}--> href="<!--{$arrNews[data].news_url}-->" <!--{if $arrNews[data].link_method eq "2"}--> target="_blank"
-                                <!--{/if}-->
-				<!--{/if}-->
-				>
-				<!--{$arrNews[data].news_title|h|nl2br}--></a>
-			</dt>
-			<dd class="mini"><!--{$arrNews[data].news_comment|h|nl2br}--></dd>
+			<!--{assign var ="now" value = $smarty.now|date_format:"%Y-%m-%d"}-->
+			<!--{assign var="start_date" value = $arrNews[data].cast_start_news_date}-->
+			<!--{assign var="end_date" value = $arrNews[data].cast_end_news_date}-->
+			<!--{assign var = "disp_judge" value="0"}-->
+		
+			<!--{if $start_date == "" && $end_date == ""}--><!--{assign var = "disp_judge" value="1"}-->
+			<!--{elseif $start_date == "" && $now <= $end_date}--><!--{assign var = "disp_judge" value="1"}-->
+			<!--{elseif $end_date == "" && $now >= $start_date}--><!--{assign var = "disp_judge" value="1"}-->
+			<!--{elseif $now >= $start_date && $now <= $end_date}--><!--{assign var = "disp_judge" value="1"}-->
+			<!--{/if}-->
 
+		
 			
 			
-			<!--{elseif $smarty.now|date_format:"%Y-%m-%d" > $arrNews[data].cast_end_news_date}-->
-			<!--{else}-->
-			<!--{*終わり*}-->
-
-			
-			<dt>表示開始期限<br><!--{$date_array[0]}-->年<!--{$date_array[1]}-->月<!--{$date_array[2]}-->日</dt>
-			<dt>表示終了期限<br><!--{$end_date_array[0]}-->年<!--{$end_date_array[1]}-->月<!--{$end_date_array[2]}-->日</dt>
+			<!--{if $disp_judge == "1"}-->
+			<!--{*終わり*}-->	
+			<!--{if $start_date != ""}--><dt>表示開始日 <!--{$start_date_array[0]}-->年<!--{$start_date_array[1]}-->月<!--{$start_date_array[2]}-->日</dt><!--{/if}-->
+			<!--{if $end_date != ""}--><dt>表示終了日 <!--{$end_date_array[0]}-->年<!--{$end_date_array[1]}-->月<!--{$end_date_array[2]}-->日</dt><!--{/if}-->
+			<dt>日付<br><!--{$date_array[0]}-->年<!--{$date_array[1]}-->月<!--{$date_array[2]}-->日</dt>
 			<dt>
                             <a
 				<!--{if $arrNews[data].news_url}--> href="<!--{$arrNews[data].news_url}-->" <!--{if $arrNews[data].link_method eq "2"}--> target="_blank"

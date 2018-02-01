@@ -47,8 +47,8 @@ class SC_Helper_News_Ex extends SC_Helper_News
     {
         $objQuery =& SC_Query_Ex::getSingletonInstance();
         /*追加箇所*/
-        $col = '*, cast(news_date as date) as cast_news_date, cast(end_news_date as date) as cast_end_news_date';
-        /*終わり*/
+        $col = '*, cast(news_date as date) as cast_news_date, cast(end_news_date as date) as cast_end_news_date,cast(start_news_date as date) as cast_start_news_date';
+        /*終わり*/ 
         $where = 'news_id = ?';
         if (!$has_deleted) {
             $where .= ' AND del_flg = 0';
@@ -70,7 +70,8 @@ class SC_Helper_News_Ex extends SC_Helper_News
     {
         $objQuery =& SC_Query_Ex::getSingletonInstance();
         /*追加箇所*/
-        $col = '*, cast(news_date as date) as cast_news_date, cast(end_news_date as date) as cast_end_news_date';
+        $col = '*, cast(news_date as date) as cast_news_date, cast(end_news_date as date) as cast_end_news_date, cast(start_news_date as date) as cast_start_news_date';
+         
         /*終わり*/
         $where = '';
         if (!$has_deleted) {

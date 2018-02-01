@@ -27,14 +27,15 @@
         <input type="hidden" name="<!--{$smarty.const.TRANSACTION_ID_NAME}-->" value="<!--{$transactionid}-->" />
         <input type="hidden" name="mode" value="" />
         <input type="hidden" name="news_id" value="<!--{$arrForm.news_id.value|default:$tpl_news_id|h}-->" />
+		
         <!--{* ▼登録テーブルここから *}-->
         <table>
             <tr>
-                <th>表示開始期限<span class="attention"> *</span></th>
+                <th>日付<span class="attention"> *</span></th>
                 <td>
                     <!--{if $arrErr.year || $arrErr.month || $arrErr.day}--><span class="attention"><!--{$arrErr.year}--><!--{$arrErr.month}--><!--{$arrErr.day}--></span><!--{/if}-->
                     <select name="year" <!--{if $arrErr.year || $arrErr.month || $arrErr.day }-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
-                        <option value="" selected="selected">----</option>
+                        <option value="" selected="selected">---</option>
                         <!--{html_options options=$arrYear selected=$arrForm.year.value}-->
                     </select>年
                     <select name="month" <!--{if $arrErr.year || $arrErr.month || $arrErr.day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
@@ -47,10 +48,27 @@
                     </select>日
                 </td>
             </tr>
+	    <th>表示開始日<span class="attention"> </span></th>
+            <td>
+		<!--{if $arrErr.start_year || $arrErr.start_month || $arrErr.start_day}--><span class="attention"><!--{$arrErr.start_year}--><!--{$arrErr.start_month}--><!--{$arrErr.start_day}--></span><!--{/if}-->
+                <select name="start_year" <!--{if $arrErr.start_year || $arrErr.start_month || $arrErr.start_day }-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">----</option>
+                    <!--{html_options options=$arrYear selected=$arrForm.start_year.value}-->
+                </select>年
+                <select name="start_month" <!--{if $arrErr.start_year || $arrErr.start_month || $arrErr.start_day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">--</option>
+                    <!--{html_options options=$arrMonth selected=$arrForm.start_month.value}-->
+                </select>月
+                <select name="start_day" <!--{if $arrErr.start_year || $arrErr.start_month || $arrErr.start_day}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
+                    <option value="" selected="selected">--</option>
+                    <!--{html_options options=$arrDay selected=$arrForm.start_day.value}-->
+                </select>日
+            </td>
+            </tr>
 	    <tr>
-                <th>表示終了期限<span class="attention"> *</span></th>
+                <th>表示終了日<span class="attention"> </span></th>
                 <td>
-                    <!--{if $arrErr.end_year || $arrErr.end_month || $arrErr.end_day}--><span class="attention"><!--{$arrErr.end_year}--><!--{$arrErr.end_month}--><!--{$arrErr.end_day}--></span><!--{/if}-->
+		    <!--{if $arrErr.end_year || $arrErr.end_month || $arrErr.end_day}--><span class="attention"><!--{$arrErr.end_year}--><!--{$arrErr.end_month}--><!--{$arrErr.end_day}--></span><!--{/if}-->
                     <select name="end_year" <!--{if $arrErr.end_year || $arrErr.end_month || $arrErr.end_day }-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
                         <option value="" selected="selected">----</option>
                         <!--{html_options options=$arrYear selected=$arrForm.end_year.value}-->
@@ -63,8 +81,6 @@
                         <option value="" selected="selected">--</option>
                         <!--{html_options options=$arrDay selected=$arrForm.end_day.value}-->
                     </select>日
-		    <!--{*追加箇所*}-->
-		    <label><input type="checkbox" name="indefinite_period_flag" value="2" <!--{if $arrForm.indefinite_period_flag.value eq 2}--> checked <!--{/if}--> /> 無期限表示</label>
                 </td>
             </tr>
             <tr>
@@ -88,7 +104,7 @@
                 <td><label><input type="checkbox" name="link_method" value="2" <!--{if $arrForm.link_method.value eq 2}--> checked <!--{/if}--> /> 別ウィンドウで開く</label></td>
             </tr>
             <tr>
-                <th>本文ですよ</th>
+                <th>本文</th>
                 <td>
                     <!--{if $arrErr.news_comment}--><span class="attention"><!--{$arrErr.news_comment}--></span><!--{/if}-->
                     <textarea name="news_comment" cols="60" rows="8" wrap="soft" class="area60" maxlength="<!--{$smarty.const.LTEXT_LEN}-->" style="background-color:<!--{if $arrErr.news_comment}--><!--{$smarty.const.ERR_COLOR|h}--><!--{/if}-->"><!--{"\n"}--><!--{$arrForm.news_comment.value|h}--></textarea><br />
@@ -122,16 +138,18 @@
         <table class="list">
             <col width="5%" />
 	    <col width="5%" />
+	    <col width="10%" />
 	    <col width="5%" />
             <col width="10%" />
-            <col width="45%" />
+            <col width="40%" />
             <col width="5%" />
             <col width="5%" />
             <col width="20%" />
             <tr>
                 <th>順位</th>
-                <th>表示開始期限</th>
-		<th>表示終了期限</th>
+		<th>日付</th>
+                <th>表示開始日</th>
+		<th>表示終了日</th>
 		<th>表示判定</th>
                 <th>タイトル</th>
                 <th class="edit">編集</th>
@@ -142,9 +160,16 @@
             <tr style="background:<!--{if $arrNews[data].news_id != $tpl_news_id}-->#ffffff<!--{else}--><!--{$smarty.const.SELECT_RGB}--><!--{/if}-->;" class="center">
                 <!--{assign var=db_rank value="`$arrNews[data].rank`"}-->
                 <td><!--{math equation="$line_max - $db_rank + 1"}--></td>
-                <td><!--{$arrNews[data].cast_news_date|date_format:"%Y/%m/%d"}--></td>
-		<td><!--{$arrNews[data].cast_end_news_date|date_format:"%Y/%m/%d"}--></td>
-		<td><!--{if $smarty.now > $arrNews[data].cast_end_news_date|strtotime}-->×<!--{else}-->○<!--{/if}--></td>
+		
+		<td><!--{$arrNews[data].cast_news_date|date_format:"%Y/%m/%d"}--></td>
+                <td><!--{if $arrNews[data].cast_start_news_date == ""}-->未設定<!--{else}--><!--{$arrNews[data].cast_start_news_date|date_format:"%Y/%m/%d"}--><!--{/if}--></td>
+		<td><!--{if $arrNews[data].cast_end_news_date == ""}-->未設定<!--{else}--><!--{$arrNews[data].cast_end_news_date|date_format:"%Y/%m/%d"}--><!--{/if}--></td>
+		<td><!--{if ($arrNews[data].cast_start_news_date == "") && ($arrNews[data].cast_end_news_date == "")}-->表示
+		    <!--{elseif ($arrNews[data].cast_start_news_date == "") && ($arrNews[data].cast_end_news_date >=  $smarty.now|date_format:"%Y-%m-%d")}-->表示
+		    <!--{elseif ($arrNews[data].cast_end_news_date == "") && ($arrNews[data].cast_start_news_date <=  $smarty.now|date_format:"%Y-%m-%d")}-->表示
+		    <!--{elseif ($arrNews[data].cast_start_news_date <= $smarty.now|date_format:"%Y-%m-%d") && ($arrNews[data].cast_end_news_date >= $smarty.now|date_format:"%Y-%m-%d")}-->表示
+		    <!--{else}-->非表示
+		    <!--{/if}--></td>
 		
                 <td class="left">
                     <!--{if $arrNews[data].link_method eq 1 && $arrNews[data].news_url != ""}--><a href="<!--{$arrNews[data].news_url|h}-->" ><!--{$arrNews[data].news_title|h|nl2br}--></a>
