@@ -28,3 +28,6 @@
 ## テーブル定義について
 
 * board2を参照
+http://qiita.com/hiroyasu55/items/11a4c996b0c62450940f
+http://qiita.com/hidekuro/items/fc12344d36d996198e96
+スクリーン リーダーのサポートを有効にするには、Ctrl+Alt+Z を押します。キーボード ショートカットの詳細については、Ctrl+スラッシュ を押します。
