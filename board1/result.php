@@ -1,5 +1,5 @@
 <?php
-require_once 'DbManager.php';
+require_once './DbManager.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,11 +15,11 @@ require_once 'DbManager.php';
     <tr>
         <th>名前</th><th>コメント</th>
     </tr>
+
+    $db = getDb();
 <?php
 
 try {
-
-    $db = getDb();
     $result = $db->prepare('SELECT * FROM post_table');
     $result->execute();
     $result->setFetchMode(PDO::FETCH_ASSOC);

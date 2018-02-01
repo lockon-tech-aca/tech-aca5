@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>掲示板</h1>
-<form action="insert.php" method="POST">
+<form action="./insert.php" method="POST">
 <div>
     <label for="name"> 名前:</label><br>
     <input id = "name" type="text" name="name" maxlength="10" >
@@ -20,7 +20,7 @@
 </form>
 
 <?php
-        require_once 'result.php';
+        require_once './result.php';
 ?>
 
 </body>

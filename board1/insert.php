@@ -1,6 +1,6 @@
 <?php
     if (!empty($_POST['name']) && !empty($_POST['contents'])) {
-        require_once 'DbManager.php';
+        require_once './DbManager.php';
         try {
             $db = getDb();
             $db->exec('SET NAMES utf8');
@@ -14,6 +14,8 @@
             die("接続エラー:{$e->getMessage()}");
         }
 }
+
 header('Location:' . dirname($_SERVER['PHP_SELF']) . '/board1.php');
+
 ?>
 
