@@ -97,7 +97,6 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
 
                 // POST値の引き継ぎ
                 $arrParam = $objFormParam->getHashArray();
-
                 $arrParam['news_date_start'] = $this->getStartDate($arrParam);
                 unset($arrParam['year_start'], $arrParam['month_start'], $arrParam['day_start']);
                 $arrParam['news_date_end'] = $this->getEndDate($arrParam);
@@ -252,10 +251,10 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
 
     public function getStartDate($arrPost)
     {
-        if(!is_numeric($arrPost['year_start']) && !is_numeric($arrPost['month_start']) && !is_numeric($arrPost['day_start'])) {
-            $StartDate = null;
-        }else{
+        if(is_numeric($arrPost['year_start']) && is_numeric($arrPost['month_start']) && is_numeric($arrPost['day_start'])) {
             $StartDate = $arrPost['year_start'] . '/' . $arrPost['month_start'] . '/' . $arrPost['day_start'];
+        }else{
+            $StartDate = null;
         }
 
         return $StartDate;
@@ -263,10 +262,10 @@ class LC_Page_Admin_Contents extends LC_Page_Admin_Ex
 
     public function getEndDate($arrPost)
     {
-        if(!is_numeric($arrPost['year_end']) && !is_numeric($arrPost['month_end']) && !is_numeric($arrPost['day_end'])){
-            $EndDate = null;
-        }elseif(is_numeric($arrPost['year_end']) && is_numeric($arrPost['month_end']) && is_numeric($arrPost['day_end'])){
+        if(is_numeric($arrPost['year_end']) && is_numeric($arrPost['month_end']) && is_numeric($arrPost['day_end'])){
             $EndDate = $arrPost['year_end'] .'/'. $arrPost['month_end'] .'/'. $arrPost['day_end'];
+        }elseif(is_numeric($arrPost['year_end']) && is_numeric($arrPost['month_end']) && is_numeric($arrPost['day_end'])){
+            $EndDate = null;
         }
 
         return $EndDate;

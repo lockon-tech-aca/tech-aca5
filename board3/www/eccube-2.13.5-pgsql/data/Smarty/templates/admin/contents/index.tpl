@@ -69,6 +69,7 @@
             <tr>
                 <th>表示終了日</th>
                 <td>
+                    <!--{if $arrErr.news_disp}--><span class="attention"><!--{$arrErr.news_disp}--></span><!--{/if}-->
                     <!--{if $arrErr.news_end ||$arrErr.year_end || $arrErr.month_end || $arrErr.day_end}--><span class="attention"><!--{$arrErr.news_end}--><!--{$arrErr.year_end}--><!--{$arrErr.month_end}--><!--{$arrErr.day_end}--></span><!--{/if}-->
                     <select name="year_end" <!--{if $arrErr.news_end ||$arrErr.year_end || $arrErr.month_end || $arrErr.day_end || $arrErr.news_disp}-->style="background-color:<!--{$smarty.const.ERR_COLOR|h}-->"<!--{/if}-->>
                     <option value="" selected="selected">----</option>

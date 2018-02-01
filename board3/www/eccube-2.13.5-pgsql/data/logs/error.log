@@ -633,3 +633,48 @@ Stack trace:
 #4 {main}
   thrown on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(106)] from 192.168.55.1
 login_id = admin(0)[785d0danioghcgtonitk1i9402]
+2018/02/01 17:10:10 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_ERROR): Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (/3/5) at position 0 (/): Unexpected character' in /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php:106
+Stack trace:
+#0 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(106): DateTime->__construct('/3/5')
+#1 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(73): LC_Page_Admin_Contents->action()
+#2 /vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process()
+#3 /vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process()
+#4 {main}
+  thrown on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(106)] from 192.168.55.1
+login_id = admin(0)[785d0danioghcgtonitk1i9402]
+2018/02/01 17:13:18 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_ERROR): Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (/3/5) at position 0 (/): Unexpected character' in /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php:106
+Stack trace:
+#0 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(106): DateTime->__construct('/3/5')
+#1 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(73): LC_Page_Admin_Contents->action()
+#2 /vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process()
+#3 /vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process()
+#4 {main}
+  thrown on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(106)] from 192.168.55.1
+login_id = admin(0)[785d0danioghcgtonitk1i9402]
+2018/02/01 17:19:23 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_ERROR): Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (/3/5) at position 0 (/): Unexpected character' in /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php:106
+Stack trace:
+#0 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(106): DateTime->__construct('/3/5')
+#1 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(73): LC_Page_Admin_Contents->action()
+#2 /vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process()
+#3 /vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process()
+#4 {main}
+  thrown on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(106)] from 192.168.55.1
+login_id = admin(0)[785d0danioghcgtonitk1i9402]
+2018/02/01 17:28:11 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_ERROR): Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (2009//12) at position 4 (/): Unexpected character' in /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php:106
+Stack trace:
+#0 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(106): DateTime->__construct('2009//12')
+#1 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(73): LC_Page_Admin_Contents->action()
+#2 /vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process()
+#3 /vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process()
+#4 {main}
+  thrown on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(106)] from 192.168.55.1
+login_id = admin(0)[785d0danioghcgtonitk1i9402]
+2018/02/01 17:29:22 [/eccube-2.13.5-pgsql/html/admin/contents/index.php] Fatal error(E_ERROR): Uncaught exception 'Exception' with message 'DateTime::__construct() [<a href='datetime.--construct'>datetime.--construct</a>]: Failed to parse time string (2009//12) at position 4 (/): Unexpected character' in /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php:107
+Stack trace:
+#0 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(107): DateTime->__construct('2009//12')
+#1 /vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(73): LC_Page_Admin_Contents->action()
+#2 /vagrant/www/eccube-2.13.5-pgsql/data/class_extends/page_extends/admin/contents/LC_Page_Admin_Contents_Ex.php(54): LC_Page_Admin_Contents->process()
+#3 /vagrant/www/eccube-2.13.5-pgsql/html/admin/contents/index.php(29): LC_Page_Admin_Contents_Ex->process()
+#4 {main}
+  thrown on [/vagrant/www/eccube-2.13.5-pgsql/data/class/pages/admin/contents/LC_Page_Admin_Contents.php(107)] from 192.168.55.1
+login_id = admin(0)[785d0danioghcgtonitk1i9402]
