@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>新規登録</title>
+    </head>
+    <body>
+        <h2>新規登録</h2>
+        <form method="post" action="user_create.php">
+            ユーザ名：<input type="text" name="name"><br>
+            パスワード：<input type="password" name="password"><br>
+            もう一度パスワードを入力してください：<input type="password" name="confirmation">
+            <input type="submit" name="registration" value="登録">
+        </form>
+        {if isset($error)} <p>{$error}</p>
+        {/if}
+    </body>
+</html>
